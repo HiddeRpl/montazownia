@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 cd ..
 (cd baseimg && ./build.sh)
-nohup docker-compose up --build &
+daemonize -E BUILD_ID=dontKillMe /usr/local/bin/docker-compose up --build
