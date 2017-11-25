@@ -11,6 +11,9 @@ end
 # Addons
 set :haml, { :format => :html5 }
 
+# Activate extensions
+activate :directory_indexes
+
 # Per-page layout changes
 page '/*.xml', layout: false
 page '/*.json', layout: false

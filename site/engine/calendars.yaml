@@ -1,0 +1,22 @@
+calendars:
+  lp_hard:
+    name: "Laser/Piercing - hard-booking"
+    id: 8mlrp5c1kuslrt6q3pp5abcuto@group.calendar.google.com
+  lp_soft:
+    name: "Laser/Piercing - soft-booking"
+    id: 880rmk27v04c37gtert5qin4s8@group.calendar.google.com
+  tattoo_hard:
+    name: "Tatuaże - hard-booking"
+    id: 60cecrdf8t9lg6g0ldunrdtuo4@group.calendar.google.com
+  tattoo_undefined:
+    name: "Tatuaże - nieokreślone"
+    id: tpkrkqf9h18ait78i63gm4qr5s@group.calendar.google.com
+  tattoo_soft:
+    name: "Tatuaże - soft-booking"
+    id: uo5vhkk4togfp51j1ttoedpdo0@group.calendar.google.com
+  private_events:
+    name: "Rzeczy prywatne"
+    id: i51jdjg50gnmr9a7mc5rr4im5s@group.calendar.google.com
+  studio:
+    name: "Studio"
+    id: montazownia.tattoo@gmail.com
