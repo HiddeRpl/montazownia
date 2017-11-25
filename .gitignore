@@ -6,4 +6,3 @@ build/
 site/calendar/client_secret.json
 site/source/images/portfolio/img/*.jpg
 site/source/images/portfolio/thumbnails/*.jpg
-site/data/img.yaml
