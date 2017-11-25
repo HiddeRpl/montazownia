@@ -5,3 +5,10 @@ services:
       context: ./site
     ports:
      - "80:80"
+    volumes:
+     - type: bind
+       source: /assets/img
+       target: /app/source/images/portfolio/img
+     - type: bind
+       source: /assets/thumbnails
+       target: /app/source/images/portfolio/thumbnails
