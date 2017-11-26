@@ -1,0 +1,9 @@
+---
+en:
+  nav:
+    calendar: "Calendar"
+    main_page: "Main page"
+  calendar:
+    title: "Calendar"
+  paths:
+    calendar: "calendar"

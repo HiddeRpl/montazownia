@@ -1,0 +1,9 @@
+---
+pl:
+  nav:
+    calendar: "Kalendarz"
+    main_page: "Strona główna"
+  calendar:
+    title: "Kalendarz"
+  paths:
+    calendar: "kalendarz"
