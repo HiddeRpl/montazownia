@@ -16,7 +16,7 @@ activate :i18n, :path => "/:locale/", :langs => [:en, :pl] , :mount_at_root => f
 activate :directory_indexes
 
 #desactive warnings
-# Haml::TempleEngine.disable_option_validator!
+Haml::TempleEngine.disable_option_validator!
 
 # Per-page layout changes
 page '/*.xml', layout: false
