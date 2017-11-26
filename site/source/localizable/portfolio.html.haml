@@ -1,7 +1,12 @@
 ---
 name: "portfolio"
 ---
--data.img.files.each do |file|
+-# -data.img.files.each do |file|
+-#   =partial(:'partials/img_item',
+-#     :locals => {:main_img => "portfolio/img/#{file}",
+-#     :thumbnail => "portfolio/thumbnails/#{file}"})
+-sitemap.resources.select{ |r| r.path.start_with?("images/portfolio/full_size") }.each do |path|
+  -image=path.path.gsub('images/', '')
+  -thumbnail=image.gsub('full_size', 'thumbnails')
   =partial(:'partials/img_item',
-    :locals => {:main_img => "portfolio/img/#{file}",
-    :thumbnail => "portfolio/thumbnails/#{file}"})
+    :locals => {:main_img => "#{image}", :thumbnail => "#{thumbnail}"})
