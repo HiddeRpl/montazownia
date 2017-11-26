@@ -1,0 +1,7 @@
+---
+name: "portfolio"
+---
+-data.img.files.each do |file|
+  =partial(:'partials/img_item',
+    :locals => {:main_img => "portfolio/img/#{file}",
+    :thumbnail => "portfolio/thumbnails/#{file}"})

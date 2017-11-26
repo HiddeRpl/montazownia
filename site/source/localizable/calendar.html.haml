@@ -1,4 +1,7 @@
-%h1 calendar booking
+---
+name: "calendar"
+---
+%h1= t("calendar.title")
 = partial(:'partials/calendar_iframe', :locals => {:studio => false,
   :lp_hard => true,
   :lp_soft => true,
