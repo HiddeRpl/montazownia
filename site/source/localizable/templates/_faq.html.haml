@@ -6,4 +6,6 @@
       %ul.faq-item
         %li.question=item.question
         %li.answer=item.answer
-    %hr
+        -if item.link
+          %li=link_to(item.link.info, item.link.address, target: "_blank")
+      %hr
