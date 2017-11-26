@@ -1,0 +1,11 @@
+%h2
+  %center F.A.Q.
+%ul.faq-list
+  -data.faq_pl.list.each do |item|
+    %li
+      %ul.faq-item
+        %li.question=item.question
+        %li.answer=item.answer
+    %hr
+      -# .question=item.question
+      -# .answer=item.answer
