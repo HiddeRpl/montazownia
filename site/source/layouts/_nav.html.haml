@@ -1,10 +1,10 @@
 %nav
   %ul
     %li
-      %a=link_to(t("nav.main_page"), "/#{I18n.locale}")
+      =link_to(t("nav.main_page"), "/#{I18n.locale}")
     %li
-      %a=link_to(t("nav.calendar"), translated_url(I18n.locale, "calendar")) #- this one needs translate because has different url for various langs
+      =link_to(t("nav.calendar"), translated_url(I18n.locale, "calendar")) #- this one needs translate because has different url for various langs
     %li
-      %a=link_to("Portfolio", "/#{I18n.locale}/portfolio")
+      =link_to("Portfolio", "/#{I18n.locale}/portfolio")
     %li
-      %a=link_to("F.A.Q.", "/#{I18n.locale}/faq")
+      =link_to("F.A.Q.", "/#{I18n.locale}/faq")

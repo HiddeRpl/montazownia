@@ -50,12 +50,19 @@ page '/*.txt', layout: false
 helpers do
 
   def translated_url(locale, page_name)
+
+    if page_name == "main"
+      return "/#{locale}"
+    end
+
     begin
       translated = I18n.translate!("paths.#{page_name}", locale: locale)
     rescue I18n::MissingTranslationData
       translated = page_name
     end
-    "/#{locale}/#{translated}"
+
+    return "/#{locale}/#{translated}"
+
   end
 
   def other_langs
