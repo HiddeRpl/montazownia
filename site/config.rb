@@ -1,6 +1,5 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
-require 'helpers/utils'
 
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
@@ -13,7 +12,9 @@ end
 set :haml, { :format => :html5 }
 
 # Activate extensions
+activate :i18n, :path => "/:locale/", :langs => [:en, :pl] , :mount_at_root => false
 activate :directory_indexes
+
 
 # Per-page layout changes
 page '/*.xml', layout: false
@@ -43,6 +44,23 @@ page '/*.txt', layout: false
 #     'Helping'
 #   end
 # end
+
+helpers do
+
+  def translated_url(locale, page_name)
+    begin
+      translated = I18n.translate!("paths.#{page_name}", locale: locale)
+    rescue I18n::MissingTranslationData
+      translated = page_name
+    end
+    "/#{locale}/#{translated}"
+  end
+
+  def other_langs
+    langs - [I18n.locale]
+  end
+
+end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
