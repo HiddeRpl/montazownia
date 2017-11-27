@@ -2,8 +2,10 @@
 .cache
 .DS_Store
 .sass-cache
+.idea
 build/
 site/calendar/client_secret.json
+site/source/images/portfolio/img/*.jpg
 site/source/images/portfolio/full_size/*.jpg
 site/source/images/portfolio/thumbnails/*.jpg
 **Gemfile.lock
