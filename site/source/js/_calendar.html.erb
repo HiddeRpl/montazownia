@@ -38,13 +38,13 @@ $(document).ready(function() {
         ]
 
     });
-    const busy_text = window.location.href.indexOf("pl") !== -1 ? "Zajęty" : "Busy";
+    const busy_text = window.location.href.includes("/en/") ? "Busy" : "Zajęty";
     $('.fc-button').on('click', function() {
         setTimeout(function () {
-        $('.fc-title').text(busy_text);
-        }, 400);
+            $('.fc-title').text(busy_text);
+        }, 500);
     });
     setTimeout(function () {
         $('.fc-title').text(busy_text);
-    }, 400);
+    }, 500);
 });
