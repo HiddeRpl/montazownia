@@ -1,0 +1,25 @@
+Libraries needed: jQuery, Momement.js, fullcalendar.js, fullcalendar.css, gcal.js.
+
+Google Calendar API key is needed. Get from url
+"https://console.developers.google.com/apis/credentials?project=montazownia-calendar-api&authuser=3"
+API key's restrictions need to be set for websites and specified urls.
+
+All the calendars' IDs are needed. Get from google calendar site, choose a calendar, go to settings, chapter
+Integrating calendar and at the top there is calendar ID.
+
+To implement a calendar firstly we need a DOM element like a <div> at which we will target and inject all the data.
+In present project at calendar template there is a <div> with id="calendar". Next, in proper javascript file got to
+invoke method fullCalendar(), in which we pass object with properties:
+    a) googleCalendarApiKey - API key
+    b) header - set up of header like position of buttons
+    c) height - widget's height in pixels
+    d) timeFormat - time format, can be am/pm or 24h with optional minutes
+    e) firstDay - which day is the first day of the week, 0 for sunday
+    f) dayNames - full day names
+    g) dayNamesShort - shortened day names
+    h) displayEventEnd - boolean, if calendar displays event's end
+    i) eventColor - specify color of events
+    j) eventSources - array of objects, single object for single calendar, we need to pass here google calendar id
+
+Next, there is a function which push inner text to the DOM element. Timeout because of waiting for calendar to render.
+Need to be improved, no event listener after changing the month (ajax call).
