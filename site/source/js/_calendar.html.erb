@@ -38,6 +38,11 @@ $(document).ready(function() {
         ]
 
     });
+    $('.fc-button').on('click', function() {
+        setTimeout(function () {
+        $('.fc-title').text("Zajęty(a)");
+        }, 400);
+    });
     setTimeout(function () {
         $('.fc-title').text("<%= busy_text %>");
     }, 400);
