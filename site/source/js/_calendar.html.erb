@@ -38,12 +38,13 @@ $(document).ready(function() {
         ]
 
     });
+    const busy_text = window.location.href.indexOf("pl") !== -1 ? "Zajęty" : "Busy";
     $('.fc-button').on('click', function() {
         setTimeout(function () {
-        $('.fc-title').text("Zajęty(a)");
+        $('.fc-title').text(busy_text);
         }, 400);
     });
     setTimeout(function () {
-        $('.fc-title').text("<%= busy_text %>");
+        $('.fc-title').text(busy_text);
     }, 400);
 });
