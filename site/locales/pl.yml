@@ -1,5 +1,6 @@
 ---
 pl:
+  busy_text: "zajęty/(a)"
   nav:
     calendar: "Kalendarz"
     main_page: "Strona główna"
