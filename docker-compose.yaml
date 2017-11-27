@@ -5,6 +5,3 @@ services:
       context: ./site
     ports:
      - "80:80"
-    volumes:
-     - /assets/img:/app/source/images/portfolio/full_size
-     - /assets/thumbnails:/app/source/images/portfolio/thumbnails
