@@ -39,12 +39,11 @@ $(document).ready(function() {
 
     });
     const busy_text = window.location.href.includes("/en/") ? "Busy" : "Zajęty";
+    function eventTitle() {
+        $('.fc-title').text(busy_text)
+    }
     $('.fc-button').on('click', function() {
-        setTimeout(function () {
-            $('.fc-title').text(busy_text);
-        }, 500);
+        setTimeout(eventTitle, 500);
     });
-    setTimeout(function () {
-        $('.fc-title').text(busy_text);
-    }, 500);
+    setTimeout(eventTitle, 500);
 });
