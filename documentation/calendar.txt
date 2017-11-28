@@ -20,7 +20,8 @@ invoke method fullCalendar(), in which we pass object with properties:
     h) displayEventEnd - boolean, if calendar displays event's end
     i) eventColor - specify color of events
     j) eventSources - array of objects, single object for single calendar, we need to pass here google calendar id
-    h) eventAfterAllRender - pass a function after all rendered
+    k) eventAfterAllRender - pass a function after all rendered
+    l) dayClick - register event click
 
 Next, there is a function which push inner text to the DOM element. Timeout because of waiting for calendar to render.
 Need to be improved, no event listener after changing the month (ajax call).

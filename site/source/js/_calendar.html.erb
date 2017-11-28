@@ -39,6 +39,9 @@ $(document).ready(function() {
         ],
         eventAfterAllRender: function() {
             $('.fc-title').text(busy_text);
+        },
+        dayClick: function(date) {
+            alert('Date: ' + date.format());
         }
     });
 });
