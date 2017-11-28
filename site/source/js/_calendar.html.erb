@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    const busy_text = window.location.href.includes("/en/") ? "Busy" : "Zajęty";
     $('#calendar').fullCalendar({
         googleCalendarApiKey: 'AIzaSyBm05DfEhI2Zo0aX9_RO79FQUSxC1ae1xk',
         header: {
@@ -35,15 +36,9 @@ $(document).ready(function() {
             {
                 googleCalendarId: 'uo5vhkk4togfp51j1ttoedpdo0@group.calendar.google.com', //tattoo soft calendar
             }
-        ]
-
+        ],
+        eventAfterAllRender: function() {
+            $('.fc-title').text(busy_text);
+        }
     });
-    const busy_text = window.location.href.includes("/en/") ? "Busy" : "Zajęty";
-    function eventTitle() {
-        $('.fc-title').text(busy_text)
-    }
-    $('.fc-button').on('click', function() {
-        setTimeout(eventTitle, 500);
-    });
-    setTimeout(eventTitle, 500);
 });
