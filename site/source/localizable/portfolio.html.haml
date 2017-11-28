@@ -5,8 +5,5 @@ name: "portfolio"
 -#   =partial(:'partials/img_item',
 -#     :locals => {:main_img => "portfolio/img/#{file}",
 -#     :thumbnail => "portfolio/thumbnails/#{file}"})
--sitemap.resources.select{ |r| r.path.start_with?("images/portfolio/full_size") }.each do |path|
-  -image=path.path.gsub('images/', '')
-  -thumbnail=image.gsub('full_size', 'thumbnails')
-  -if !thumbnail.include? ".keep"
-    =image_tag thumbnail, { :fullsize_path => "images/#{image}" }
+-sitemap.resources.select{ |r| r.path.start_with?("images/portfolio") }.each do |image|
+  =image_tag(image.path.gsub('images/', ''), :class => "thumbnail")
