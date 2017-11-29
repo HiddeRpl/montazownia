@@ -1,0 +1,13 @@
+=link_to(t("nav.main_page"),
+  "/#{I18n.locale}",
+  :class=> "mdl-navigation__link")
+=link_to(t("nav.calendar"),
+  translated_url(I18n.locale, "calendar"),
+  :class=> "mdl-navigation__link")
+=link_to("Portfolio",
+  "/#{I18n.locale}/portfolio",
+  :class=> "mdl-navigation__link")
+=link_to("F.A.Q.",
+  "/#{I18n.locale}/faq",
+  :class=> "mdl-navigation__link")
+=partial("layouts/partials/language_choice")

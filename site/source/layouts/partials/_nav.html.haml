@@ -4,32 +4,8 @@
       %span.mdl-layout-title MONTAŻOWNIA TATUAŻU
       .mdl-layout-spacer
       %nav.mdl-navigation.mdl-layout--large-screen-only
-        =link_to(t("nav.main_page"),
-          "/#{I18n.locale}",
-          :class=> "mdl-navigation__link")
-        =link_to(t("nav.calendar"),
-          translated_url(I18n.locale, "calendar"),
-          :class=> "mdl-navigation__link")
-        =link_to("Portfolio",
-          "/#{I18n.locale}/portfolio",
-          :class=> "mdl-navigation__link")
-        =link_to("F.A.Q.",
-          "/#{I18n.locale}/faq",
-          :class=> "mdl-navigation__link")
-        =partial("layouts/partials/language_choice")
+        =partial("layouts/partials/links")
     .mdl-layout__drawer.mdl-layout--small-screen-only
       %span.mdl-layout-title MONTAŻOWNIA TATUAŻU
       %nav.mdl-navigation
-        =link_to(t("nav.main_page"),
-          "/#{I18n.locale}",
-          :class=> "mdl-navigation__link")
-        =link_to(t("nav.calendar"),
-          translated_url(I18n.locale, "calendar"),
-          :class=> "mdl-navigation__link")
-        =link_to("Portfolio",
-          "/#{I18n.locale}/portfolio",
-          :class=> "mdl-navigation__link")
-        =link_to("F.A.Q.",
-          "/#{I18n.locale}/faq",
-          :class=> "mdl-navigation__link")
-        =partial("layouts/partials/language_choice")
+        =partial("layouts/partials/links")
