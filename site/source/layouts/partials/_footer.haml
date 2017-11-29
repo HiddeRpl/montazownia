@@ -1,0 +1,15 @@
+%ul
+  %li
+    .socialmedia-link=link_to("Facebook",
+      "http://facebook.com/montazownia",
+      target: "_blank")
+  %li
+    .socialmedia-link=link_to("Instagram",
+      "http://instagram.com/montazownia",
+      target: "_blank")
+
+%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"}
+%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.2/moment.min.js"}
+%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.js"}
+%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/gcal.min.js"}
+= javascript_include_tag "site"
