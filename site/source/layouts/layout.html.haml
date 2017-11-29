@@ -5,12 +5,18 @@
     %meta{'http-equiv' => 'x-ua-compatible', 'content' => 'ie=edge'}
     %meta{'name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no' }
     %title= current_page.data.title || "Montażownia Tatuażu"
-    %link{:href => "https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.7.0/fullcalendar.min.css",
-    :rel => "stylesheet",
-    :type => "text/css"}
+    %link{:rel => :stylesheet, :type => :"text/css",
+          :href => "http://fonts.googleapis.com/css?family=Roboto:300,400,500,700"}
+    %link{:rel => :stylesheet, :type => :"text/css",
+          :href => "https://fonts.googleapis.com/icon?family=Material+Icons"}
+    = stylesheet_link_tag "lib/fullcalendar/fullcalendar.min"
+    = stylesheet_link_tag "lib/normalize/normalize"
+    = stylesheet_link_tag "lib/MaterialDesignLite/material.min"
     = stylesheet_link_tag "site"
   %body
     = partial(:'layouts/language_choice')
     = partial(:'layouts/nav')
-    = yield
+    %main.mdl-layout__content
+      .page-content
+        = yield
     = partial(:'layouts/footer')

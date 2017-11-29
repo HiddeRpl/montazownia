@@ -1,3 +1,5 @@
+@import 'variables';
+
 body {
   background-color: #057ec4;
   color: #d6d6d6;
@@ -18,32 +20,9 @@ button {
   outline: none;
 }
 
-#calendar {
-  display: block;
-  width: 800px;
-  margin: auto;
-  background-color: white;
+.page-content {
+  margin-top: $baseline*20;
 }
 
-.fc .fc-toolbar>*>* {
-  margin-left: 0;
-  border-radius: 0;
-  background: white;
-  box-shadow: none;
-  border: none;
-  &:hover {
-    background: rgba(0,0,0,0.1);
-  }
-}
-
-.fc-unthemed td.fc-today {
-  background: rgba(0,0,0,0.1);
-}
-
-.fc-day-top {
-  background-color: rgba(0,0,0,0.1) !important;
-}
-
-.fc-unthemed .fc-content {
-  white-space: normal;
-}
+@import "navbar";
+@import "calendar";

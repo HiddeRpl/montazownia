@@ -1,0 +1,48 @@
+@import "variables";
+
+#calendar {
+  display: block;
+  width: 800px;
+  margin: auto;
+  background-color: white;
+}
+
+.fc .fc-toolbar>*>* {
+  margin-left: 0;
+  border-radius: 0;
+  background: white;
+  box-shadow: none;
+  border: none;
+  &:hover {
+    background: rgba(0,0,0,0.1);
+  }
+}
+
+.fc .fc-toolbar > .fc-center > h2:hover {
+  background: transparent;
+}
+
+.fc-center {
+  cursor: default;
+  color: black;
+}
+
+.fc-unthemed td.fc-today {
+  background: rgba(0,0,0,0.1);
+}
+
+.fc-day-header {
+  color: black;
+}
+
+.fc-day-number {
+  color: black;
+}
+
+.fc-day-top {
+  background-color: rgba(0,0,0,0.1) !important;
+}
+
+.fc-unthemed .fc-content {
+  white-space: normal;
+}
