@@ -1,9 +1,5 @@
 ---
 name: "portfolio"
 ---
--# -data.img.files.each do |file|
--#   =partial(:'partials/img_item',
--#     :locals => {:main_img => "portfolio/img/#{file}",
--#     :thumbnail => "portfolio/thumbnails/#{file}"})
 -sitemap.resources.select{ |r| r.path.start_with?("images/portfolio") }.each do |image|
   =image_tag(image.path.gsub('images/', ''), :class => "thumbnail")
