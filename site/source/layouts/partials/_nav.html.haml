@@ -1,10 +1,35 @@
-%nav
-  %ul
-    %li
-      =link_to(t("nav.main_page"), "/#{I18n.locale}")
-    %li
-      =link_to(t("nav.calendar"), translated_url(I18n.locale, "calendar")) #- this one needs translate because has different url for various langs
-    %li
-      =link_to("Portfolio", "/#{I18n.locale}/portfolio")
-    %li
-      =link_to("F.A.Q.", "/#{I18n.locale}/faq")
+.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+  %header.mdl-layout__header
+    .mdl-layout__header-row
+      %span.mdl-layout-title MONTAŻOWNIA TATUAŻU
+      .mdl-layout-spacer
+      %nav.mdl-navigation.mdl-layout--large-screen-only
+        =link_to(t("nav.main_page"),
+          "/#{I18n.locale}",
+          :class=> "mdl-navigation__link")
+        =link_to(t("nav.calendar"),
+          translated_url(I18n.locale, "calendar"),
+          :class=> "mdl-navigation__link")
+        =link_to("Portfolio",
+          "/#{I18n.locale}/portfolio",
+          :class=> "mdl-navigation__link")
+        =link_to("F.A.Q.",
+          "/#{I18n.locale}/faq",
+          :class=> "mdl-navigation__link")
+        =partial("layouts/partials/language_choice")
+    .mdl-layout__drawer.mdl-layout--small-screen-only
+      %span.mdl-layout-title MONTAŻOWNIA TATUAŻU
+      %nav.mdl-navigation
+        =link_to(t("nav.main_page"),
+          "/#{I18n.locale}",
+          :class=> "mdl-navigation__link")
+        =link_to(t("nav.calendar"),
+          translated_url(I18n.locale, "calendar"),
+          :class=> "mdl-navigation__link")
+        =link_to("Portfolio",
+          "/#{I18n.locale}/portfolio",
+          :class=> "mdl-navigation__link")
+        =link_to("F.A.Q.",
+          "/#{I18n.locale}/faq",
+          :class=> "mdl-navigation__link")
+        =partial("layouts/partials/language_choice")

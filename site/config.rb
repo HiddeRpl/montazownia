@@ -65,6 +65,10 @@ helpers do
 
   end
 
+  def current_lang
+    I18n.locale
+  end
+
   def other_langs
     langs - [I18n.locale]
   end
