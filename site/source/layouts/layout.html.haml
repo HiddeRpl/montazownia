@@ -10,7 +10,7 @@
     :type => "text/css"}
     = stylesheet_link_tag "site"
   %body
-    = partial(:'layouts/language_choice')
-    = partial(:'layouts/nav')
+    = partial(:'layouts/partials/language_choice')
+    = partial(:'layouts/partials/nav')
     = yield
-    = partial(:'layouts/footer')
+    = partial(:'layouts/partials/footer')
