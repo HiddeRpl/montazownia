@@ -1,9 +1,18 @@
 ---
 en:
+  keywords: "tatoos, tattoo studio, piercing, laser removal, tattoo facts"
+  titles:
+    calendar: "Free terms for a visit"
+    faq: "F.A.Q."
+  descriptions:
+    calendar: "Calendar with free terms to make an appointment or organise guestspot"
+    faq: "Most frequent questions and answers about making tattoos"
+    main: "Main page of tattoo studio Montażownia Tatuażu"
+    portfolio: "Album with all tattoos made in Montażownia tatuażu"
   nav:
     calendar: "Calendar"
     main_page: "Main page"
   calendar:
     title: "Calendar"
   paths:
-    calendar: "calendar"
+    calendar: "free-terms"

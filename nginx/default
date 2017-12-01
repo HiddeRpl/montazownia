@@ -38,20 +38,20 @@ server {
 
 	server_name montazownia.com.pl;
 	root /var/www/html;
-	index index.html index.htm;        
+	index index.html index.htm;
 
 
 	location = / {
 		rewrite_by_lua '
 		for lang in (ngx.var.http_accept_language .. ","):gmatch("([^,]*),") do
 		  if string.sub(lang, 0, 2) == "en" then
-		   ngx.redirect("/en/")
+		   ngx.redirect("/en/", 301)
 		  end
-		  if string.sub(lang, 0, 2) == "es" then
-		    ngx.redirect("/es/")
+		  if string.sub(lang, 0, 2) == "pl" then
+		    ngx.redirect("/pl/", 301)
 		  end
 		end
-		ngx.redirect("/en/")
+		ngx.redirect("/en/", 301)
 		';
 		#rewrite ^/$ /en/ permanent;
 		# First attempt to serve request as file, then

@@ -5,4 +5,4 @@
   - other_langs.each do |lang|
     %li
       do wyboru
-      =link_to(lang, translated_url(lang, current_page.data.name))
+      =link_to(lang, translated_url(lang, current_page.data.name), :lang => lang)
