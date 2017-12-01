@@ -41,24 +41,35 @@ page '/404.html', :layout => :error
 
 helpers do
 
+  def full_lang_name(lang)
+    case lang.to_s
+    when "pl"
+      "Polski"
+    when "en"
+      "English"
+    when "es"
+      "Español"
+    end
+  end
+
   def get_current_time
     t = Time.now
     return t.httpdate
   end
 
   def get_title(name)
-    if name == "main"
+    if name.eql? "main"
       return "Montażownia Tatuażu"
     end
     title=I18n.translate("titles.#{name}", I18n.locale)
     if title.include? "translation missing"
       title=name.capitalize
     end
-    return "#{title} | Montażownia Tatuażu"
+    "#{title} | Montażownia Tatuażu"
   end
 
   def translated_url(locale, page_name)
-    if page_name == "main"
+    if page_name.eql? "main"
       return "/#{locale}"
     end
     begin
@@ -66,12 +77,12 @@ helpers do
     rescue I18n::MissingTranslationData
       translated = page_name
     end
-    return "/#{locale}/#{translated}"
+    "/#{locale}/#{translated}"
   end
 
   def full_translated_url(locale, page_name)
     relative_url=translated_url(locale, page_name)
-    return "http://montazownia.com.pl#{relative_url}"
+    "http://montazownia.com.pl#{relative_url}"
   end
 
   def current_lang
