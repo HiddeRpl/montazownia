@@ -1,9 +1,19 @@
 ---
 pl:
+  keywords: "tatuaże, piercing, usuwanie laserowe, studio tatuażu, dziary, fakty o tatuażach"
+  titles:
+    calendar: "Wolne terminy"
+    faq: "Pytania i odpowiedzi"
+  descriptions:
+    calendar: "Kalendarz z terminami, w które można się umówić na tatuaż lub wyjazd"
+    faq: "Najczęstsze pytania jakie mają ludzie chcący tatuaż ze szczegółowymi odpowiedziami"
+    main: "Strona główna Montażowni tatuażu"
+    portfolio: "Portfolio prac, które do tej pory zostały wykonane w naszym studiu"
   nav:
     calendar: "Kalendarz"
     main_page: "Strona główna"
   calendar:
     title: "Kalendarz"
   paths:
-    calendar: "kalendarz"
+    calendar: "wolne-terminy"
+    faq: "pytania-i-odpowiedzi"

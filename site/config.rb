@@ -1,6 +1,8 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
+require 'time'
+
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
@@ -37,32 +39,39 @@ page '/404.html', :layout => :error
 #   },
 # )
 
-# Helpers
-# Methods defined in the helpers block are available in templates
-# https://middlemanapp.com/basics/helper-methods/
-
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
-
 helpers do
 
-  def translated_url(locale, page_name)
+  def get_current_time
+    t = Time.now
+    return t.httpdate
+  end
 
+  def get_title(name)
+    if name == "main"
+      return "Montażownia Tatuażu"
+    end
+    title=I18n.translate("titles.#{name}", I18n.locale)
+    if title.include? "translation missing"
+      title=name.capitalize
+    end
+    return "#{title} | Montażownia Tatuażu"
+  end
+
+  def translated_url(locale, page_name)
     if page_name == "main"
       return "/#{locale}"
     end
-
     begin
       translated = I18n.translate!("paths.#{page_name}", locale: locale)
     rescue I18n::MissingTranslationData
       translated = page_name
     end
-
     return "/#{locale}/#{translated}"
+  end
 
+  def full_translated_url(locale, page_name)
+    relative_url=translated_url(locale, page_name)
+    return "http://montazownia.com.pl#{relative_url}"
   end
 
   def current_lang
