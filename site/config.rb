@@ -1,7 +1,15 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
-require 'time'
+require "lib/language_helpers"
+require "lib/translation_helpers"
+require "lib/page_helpers"
+require "lib/utility_helpers"
+
+helpers LanguageHelpers
+helpers TranslationHelpers
+helpers PageHelpers
+helpers UtilityHelpers
 
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
@@ -38,83 +46,6 @@ page '/404.html', :layout => :error
 #     which_fake_page: 'Rendering a fake page with a local variable'
 #   },
 # )
-
-helpers do
-
-  def full_lang_name(lang)
-    case lang.to_s
-    when "pl"
-      "Polski"
-    when "en"
-      "English"
-    when "es"
-      "Español"
-    end
-  end
-
-  def get_current_time
-    t = Time.now
-    return t.httpdate
-  end
-
-  def get_title(name)
-    if name.eql? "main"
-      return "Montażownia Tatuażu"
-    end
-    title=I18n.translate("titles.#{name}", I18n.locale)
-    if title.include? "translation missing"
-      title=name.capitalize
-    end
-    "#{title} | Montażownia Tatuażu"
-  end
-
-  def translated_url(locale, page_name)
-    if page_name.eql? "main"
-      return "/#{locale}"
-    end
-    begin
-      translated = I18n.translate!("paths.#{page_name}", locale: locale)
-    rescue I18n::MissingTranslationData
-      translated = page_name
-    end
-    "/#{locale}/#{translated}"
-  end
-
-  def full_translated_url(locale, page_name)
-    relative_url=translated_url(locale, page_name)
-    "http://montazownia.com.pl#{relative_url}"
-  end
-
-  def current_lang
-    I18n.locale
-  end
-
-  def other_langs
-    langs - [I18n.locale]
-  end
-
-  def get_alt(image)
-    name = image.path.gsub("images/portfolio/", '').gsub(".", "")
-    data.alts.list.each do |alt|
-      if alt.name.to_s.eql? name.to_s
-        if current_lang.to_s.eql? "pl"
-          return alt.pl
-        elsif current_lang.to_s.eql? "en"
-          return alt.en
-        end
-      end
-    end
-  end
-
-  def get_faq_list
-    if current_lang.to_s.eql? "pl"
-      return data.faq_pl.list
-    elsif current_lang.to_s.eql? "en"
-      return data.faq_en.list
-    end
-  end
-
-end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings

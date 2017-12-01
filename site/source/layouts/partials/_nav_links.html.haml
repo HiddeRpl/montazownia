@@ -1,8 +1,11 @@
-=link_to(t("nav.main_page"),
+=link_to(t("titles.main_page"),
   "/#{I18n.locale}",
   :class=> "mdl-navigation__link")
-=link_to(t("nav.calendar"),
+=link_to(t("titles.calendar"),
   translated_url(I18n.locale, "calendar"),
+  :class=> "mdl-navigation__link")
+=link_to(t("titles.guide"),
+  translated_url(I18n.locale, "guide"),
   :class=> "mdl-navigation__link")
 =link_to("Portfolio",
   translated_url(I18n.locale, "portfolio"),

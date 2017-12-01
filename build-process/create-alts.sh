@@ -5,6 +5,6 @@ cd -
 cd alts
 for file in ${files}; do
   touch ${file}.alt
-  echo "pl ${file}" > ${file}.alt
-  echo "en ${file}" >> ${file}.alt
+  # echo "pl ${file}" > ${file}.alt
+  # echo "en ${file}" >> ${file}.alt
 done

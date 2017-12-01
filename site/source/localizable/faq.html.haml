@@ -7,8 +7,10 @@ name: "faq"
   -get_faq_list.each do |item|
     %li
       %ul.faq-item
-        %li.question=item.question
+        %li
+          %h3.question=item.question
         %li.answer=item.answer
         -if item.link
-          %li=link_to(item.link.info, item.link.address, target: "_blank")
+          %li
+            %h4=link_to(item.link.info, item.link.address, target: "_blank")
       %hr
