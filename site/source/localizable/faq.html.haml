@@ -1,16 +1,16 @@
 ---
 name: "faq"
 ---
-%h2
-  F.A.Q.
-%ul.faq-list
-  -get_faq_list.each do |item|
-    %li
-      %ul.faq-item
-        %li
-          %h3.question=item.question
-        %li.answer=item.answer
-        -if item.link
-          %li
-            %h4=link_to(item.link.info, item.link.address, target: "_blank")
-      %hr
+%article
+  %h1 F.A.Q.
+  %header Tutaj odpowiemy na wszystkie wasze pytania
+  %ul.faq-list
+    -get_faq_list.each do |item|
+      %li
+        %section
+          %header
+            %h2.question=item.question
+          %p.answer=item.answer
+          -if item.link
+            %h3=link_to(item.link.info, item.link.address, target: "_blank")
+        %hr

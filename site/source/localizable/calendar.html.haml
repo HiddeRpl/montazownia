@@ -2,5 +2,14 @@
 name: "calendar"
 ---
 %h1= t("sites.calendar.title")
-
-#calendar
+%article
+%section
+  %header tutaj znajdziecie wszystkie wolne terminy
+  =content_tag :p do
+    Zapraszamy do kontaktowanie się przez:
+    %ul.contact-list
+      %li telefon
+      %li maila
+      %li fanpage na fejsie
+%section
+  #calendar
