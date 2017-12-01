@@ -93,6 +93,27 @@ helpers do
     langs - [I18n.locale]
   end
 
+  def get_alt(image)
+    name = image.path.gsub("images/portfolio/", '').gsub(".", "")
+    data.alts.list.each do |alt|
+      if alt.name.to_s.eql? name.to_s
+        if current_lang.to_s.eql? "pl"
+          return alt.pl
+        elsif current_lang.to_s.eql? "en"
+          return alt.en
+        end
+      end
+    end
+  end
+
+  def get_faq_list
+    if current_lang.to_s.eql? "pl"
+      return data.faq_pl.list
+    elsif current_lang.to_s.eql? "en"
+      return data.faq_en.list
+    end
+  end
+
 end
 
 # Build-specific configuration

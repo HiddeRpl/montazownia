@@ -1,7 +1,10 @@
+---
+name: "faq"
+---
 %h2
   F.A.Q.
 %ul.faq-list
-  -faq_list.each do |item|
+  -get_faq_list.each do |item|
     %li
       %ul.faq-item
         %li.question=item.question
