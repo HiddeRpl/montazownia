@@ -1,11 +1,11 @@
-.mdl-layout.mdl-js-layout.mdl-layout--fixed-header
+.mdl-layout.mdl-layout--no-desktop-drawer-button.mdl-js-layout.mdl-layout--fixed-header
   %header.mdl-layout__header
     .mdl-layout__header-row
       %span.mdl-layout-title MONTAŻOWNIA TATUAŻU
       .mdl-layout-spacer
       %nav.mdl-navigation.mdl-layout--large-screen-only
         =partial("layouts/partials/links")
-    .mdl-layout__drawer.mdl-layout--small-screen-only
-      %span.mdl-layout-title MONTAŻOWNIA TATUAŻU
-      %nav.mdl-navigation
-        =partial("layouts/partials/links")
+  .mdl-layout__drawer
+    %span.mdl-layout-title MONTAŻOWNIA TATUAŻU
+    %nav.mdl-navigation
+      =partial("layouts/partials/links")

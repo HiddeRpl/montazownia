@@ -1,5 +1,20 @@
-@media screen and (min-width: 1025px) {
-  .mdl-layout__drawer-button {
-    display: none;
+@import "variables";
+
+.active-lang img {
+  height: 23px;
+  width: auto;
+  padding: 0 $baseline*3;
+}
+
+
+
+.other-lang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    padding: 0;
+    padding-right: $baseline;
   }
 }

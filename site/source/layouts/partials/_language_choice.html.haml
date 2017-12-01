@@ -1,8 +1,20 @@
-%span
-  obecny język
-  =current_lang
-%ul
-  - other_langs.each do |lang|
-    %li
-      do wyboru
-      =link_to(lang, translated_url(lang, current_page.data.name))
+%span.active-lang.activeFlag
+  =image_tag("images/flags/polish.png")
+
+%button#menu-lower-right.mdl-button.mdl-js-button.mdl-button--icon
+  %i.material-icons more_vert
+%ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect{:for => "menu-lower-right"}
+  %li.mdl-menu__item.active-lang
+    %a.other-lang{:href => "asdas"}
+      =image_tag("images/flags/english.png")
+      %span ENGLISH
+  %li.mdl-menu__item.active-lang
+    %a.other-lang{:href => "asdas"}
+      =image_tag("images/flags/spanish.png")
+      %span SPANISH
+
+-#%ul
+-#  - other_langs.each do |lang|
+-#    %li
+-#      do wyboru
+-#      =link_to(lang, translated_url(lang, current_page.data.name))
