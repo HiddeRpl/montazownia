@@ -5,6 +5,13 @@
     = partial(:'layouts/partials/nav')
     %main.mdl-layout__content
       .page-content
-        = yield
+        %header
+          %h1
+            -if current_page.data.dont_translate_header?
+              =current_page.data.header
+            -else
+              =t(current_page.data.header)
+        %article
+          = yield
         = partial(:'layouts/partials/footer')
     = partial(:'layouts/partials/javascript_includes')

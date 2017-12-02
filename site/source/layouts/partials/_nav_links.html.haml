@@ -2,15 +2,15 @@
   "/#{I18n.locale}",
   :class=> "mdl-navigation__link")
 =link_to(t("titles.calendar"),
-  translated_url(I18n.locale, "calendar"),
+  local_url("calendar"),
   :class=> "mdl-navigation__link")
 =link_to(t("titles.guide"),
-  translated_url(I18n.locale, "guide"),
+  local_url("guide"),
   :class=> "mdl-navigation__link")
 =link_to("Portfolio",
-  translated_url(I18n.locale, "portfolio"),
+  local_url("portfolio"),
   :class=> "mdl-navigation__link")
 =link_to("F.A.Q.",
-  translated_url(I18n.locale, "faq"),
+  local_url("faq"),
   :class=> "mdl-navigation__link")
 =partial("layouts/partials/language_choice")

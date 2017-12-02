@@ -23,9 +23,8 @@ module TranslationHelpers
     "/#{locale}/#{translated}"
   end
 
-  def full_translated_url(locale, page_name)
-    relative_url=translated_url(locale, page_name)
-    "http://montazownia.com.pl#{relative_url}"
+  def local_url(page_name)
+    return translated_url(I18n.locale, page_name)
   end
-
+  
 end

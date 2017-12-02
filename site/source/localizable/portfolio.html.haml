@@ -1,6 +1,9 @@
 ---
 name: "portfolio"
+dont_translate_header: true
+header: "Portfolio"
 ---
-%h1 Portfolio
 -sitemap.resources.select{ |r| r.path.start_with?("images/portfolio") }.each do |image|
-  =image_tag(image.path.gsub('images/', ''), :class => "thumbnail", :alt => get_alt(image))
+  %section
+    %figure
+      =image_tag(image.path.gsub('images/', ''), :class => "thumbnail", :alt => get_alt(image))

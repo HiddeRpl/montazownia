@@ -1,15 +1,23 @@
 ---
 name: "calendar"
+header: "sites.calendar.title"
 ---
-%h1= t("sites.calendar.title")
-%article
 %section
-  %header tutaj znajdziecie wszystkie wolne terminy
+  %header
+    %h4 tutaj znajdziecie wszystkie wolne terminy
   =content_tag :p do
     Zapraszamy do kontaktowanie się przez:
     %ul.contact-list
-      %li telefon
-      %li maila
-      %li fanpage na fejsie
+      %li
+        %strong telefon
+      %li
+        %strong maila
+      %li
+        %strong
+          -# tutaj na mobilke trzeba dodać m. przed facebook
+          =link_to('fanpage na fejsie', "https://facebok.com/messages/Montazownia")
 %section
-  #calendar
+  %figure
+    %figcaption
+      %h3 pick a date to start booking
+    #calendar

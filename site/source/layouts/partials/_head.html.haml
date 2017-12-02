@@ -9,10 +9,9 @@
   %meta{'name' => 'geo.placename', 'content' => 'ul. Różana 6/LU1, Poznań 61-577, PL'}
   %meta{'name' => 'geo.region', 'content' => 'POL-Poland'}
   %meta{'name' => 'ICBM', 'content' => '52.39792742; 16.92453504'}
-  %meta{'name' => 'keywords', 'content' => t(:keywords)}
   %meta{'name' => 'generator', 'content' => 'middleman'}
   - other_langs.each do |lang|
-    %link{:rel => 'alternate', :href => full_translated_url(lang, current_page.data.name) , :hreflang => lang}
+    %link{:rel => 'alternate', :href => translated_url(lang, current_page.data.name) , :hreflang => lang}
 
   %link{:rel => :stylesheet, :type => :"text/css",
         :href => "http://fonts.googleapis.com/css?family=Roboto:300,400,500,700"}
