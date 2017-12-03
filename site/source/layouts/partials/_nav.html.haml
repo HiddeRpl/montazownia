@@ -1,14 +1,15 @@
 .mdl-layout.mdl-layout--no-desktop-drawer-button.mdl-js-layout.mdl-layout--fixed-header
-  %header.mdl-layout__header
+  .mdl-layout__header
     .mdl-layout__header-row
-      %h1
-        -# myślisz że spoko dodać tutaj header? To teoretycznie by pomogło na SEO
-        %span.mdl-layout-title MONTAŻOWNIA TATUAŻU
+      %header
+        %h1
+          %span.mdl-layout-title MONTAŻOWNIA TATUAŻU
       .mdl-layout-spacer
       %nav.mdl-navigation.mdl-layout--large-screen-only
         =partial("layouts/partials/nav_links")
   .mdl-layout__drawer
-    %h1
-      %span.mdl-layout-title MONTAŻOWNIA TATUAŻU
+    %header
+      %h1
+        %span.mdl-layout-title MONTAŻOWNIA TATUAŻU
     %nav.mdl-navigation
       =partial("layouts/partials/nav_links")
