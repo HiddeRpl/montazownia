@@ -1,16 +1,5 @@
-=link_to(t("titles.main_page"),
-  "/#{I18n.locale}",
-  :class=> "mdl-navigation__link")
-=link_to(t("titles.calendar"),
-  local_url("calendar"),
-  :class=> "mdl-navigation__link")
-=link_to(t("titles.guide"),
-  local_url("guide"),
-  :class=> "mdl-navigation__link")
-=link_to("Portfolio",
-  local_url("portfolio"),
-  :class=> "mdl-navigation__link")
-=link_to("F.A.Q.",
-  local_url("faq"),
-  :class=> "mdl-navigation__link")
+-get_navlink_sites.each do |page|
+  =link_to(get_navlink_title(page.data.id), 
+  page.url, 
+  :class=> "mdl-navigation__link") 
 =partial("layouts/main/language_choice")

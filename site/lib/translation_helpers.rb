@@ -1,13 +1,18 @@
 module TranslationHelpers
 
-  def get_title(name)
-    if name.eql? "main"
-      return "Montażownia Tatuażu"
-    end
+  def get_navlink_title(name)
     title=I18n.translate("titles.#{name}", I18n.locale)
     if title.include? "translation missing"
       title=name.capitalize
     end
+    return title
+  end
+
+  def get_head_title(name)
+    if name.eql? "main"
+      return "Montażownia Tatuażu"
+    end
+    title=get_navlink_title(name)
     "#{title} | Montażownia Tatuażu"
   end
 

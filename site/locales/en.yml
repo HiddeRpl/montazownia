@@ -7,13 +7,14 @@ en:
     calendar: "Free terms"
     faq: "F.A.Q."
     guide: "Tattoo care"
-    main_page: "Main page"
+    main: "Main page"
   descriptions:
-    calendar: "Calendar with free terms to make an appointment or organise guestspot"
-    faq: "Most frequent questions and answers about making tattoos"
-    main: "Main page of tattoo studio Montażownia Tatuażu"
-    portfolio: "Album with all tattoos made in Montażownia tatuażu"
-    guide: "Short guide about how to take care about yourself after making a tattoo"
+    calendar: "Calendar with free terms to make an appointment for tattoo or organise guestspot."
+    faq: "Most frequent questions and answers about making tattoos."
+    main: "Main page of tattoo studio Montażownia Tatuażu located in Poznań, Poland"
+    portfolio: "Album with most represntative tattoos made in Montażownia tatuażu"
+    guide: "Short guide about how to take care about your fresh tattoo and yourself after doing it."
+    blog: "Blog about tattoos, their history and culture. Sometimes with posts about tattoo adventures of Montażownia."
   sites:
     calendar:
       title: "Calendar"

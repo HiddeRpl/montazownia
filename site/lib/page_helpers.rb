@@ -1,5 +1,13 @@
 module PageHelpers
 
+  def get_navlink_sites
+    return sitemap.resources
+    .select{ |r| r.url =~ /^(\/#{current_lang}\/)(?!.*page).*$/ }
+    .select{ |r| r.data.id? }
+    .sort_by{ |r| r.data.ordinal }
+  end
+    
+
   def get_alt(image)
     name = image.path.gsub("images/portfolio/", '').gsub(".", "")
     data.alts.list.each do |alt|

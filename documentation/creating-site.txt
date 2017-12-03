@@ -1,6 +1,6 @@
-1) Add your page to localizable in *.html.haml or *.html.erb
+1) Add your page to localizable in *.html.haml or *.html.erb format
 2) Add your displayed paths in locales/{lang}.yaml
-3) Add its title if necessary (if no, the name of file capitalized will be taken)
+3) Add its title if necessary (if no, the id of the file will be capitalized and taken)
 4) Add its description for meta-tag (one sentance in human-understable way)
-5) Add link_to it in _links of navigation
-6) Include the name of page in frontmatter as name: equal to the file name
+5) Include the id of page in frontmatter equal to the file name
+6) If it's site included in navigation include its ordinal
