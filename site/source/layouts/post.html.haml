@@ -5,7 +5,6 @@
         %meta{'name' => 'description', 'content' => t("descriptions.#{current_page.data.id}")}
         %title=current_page.data.title
         -# make way to define if post is translated -> if is, make the mapping for SEO
-        = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
     %body
     = partial(:'layouts/main/nav')
     %main.mdl-layout__content

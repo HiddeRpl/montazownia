@@ -6,8 +6,6 @@
     %title= get_head_title(current_page.data.id)
     - other_langs.each do |lang|
       %link{:rel => 'alternate', :href => translated_url(lang, current_page.data.id) , :hreflang => lang}
-    - if current_page.data.id.to_s.eql? "blog"
-      = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
   %body
     = partial(:'layouts/main/nav')
     %main.mdl-layout__content
