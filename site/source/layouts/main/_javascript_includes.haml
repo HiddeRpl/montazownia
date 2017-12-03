@@ -3,7 +3,7 @@
 = javascript_include_tag "lib/Moment/moment.min"
 = javascript_include_tag "lib/gCal/gcal.min"
 = javascript_include_tag "lib/MaterialDesignLite/material.min"
-= javascript_include_tag "site"
 -if current_page.data.additional_javascripts?
   -current_page.data.additional_javascripts.each do |javascript|
     = javascript_include_tag javascript
+= javascript_include_tag "site"

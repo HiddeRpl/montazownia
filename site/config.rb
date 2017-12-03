@@ -1,15 +1,18 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
-require "lib/language_helpers"
-require "lib/translation_helpers"
-require "lib/page_helpers"
-require "lib/utility_helpers"
+load "lib/language_helpers.rb"
+load "lib/translation_helpers.rb"
+load "lib/page_helpers.rb"
+load "lib/utility_helpers.rb"
+load "lib/blog_helpers.rb"
 
 helpers LanguageHelpers
 helpers TranslationHelpers
 helpers PageHelpers
 helpers UtilityHelpers
+helpers BlogHelpers
+
 
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
@@ -22,7 +25,7 @@ end
 set :haml, { :format => :html5 }
 
 # Activate extensions
-activate :i18n, :path => "/:locale/", :langs => [:en, :pl] , :mount_at_root => false
+activate :i18n, :path => "/:locale/", :langs => [:pl, :en] , :mount_at_root => false
 activate :directory_indexes
 
 #desactive warnings
@@ -37,7 +40,7 @@ page '/*.txt', layout: false
 page '/404.html', :layout => :error
 
 # Blog layout
-page 'localizable/blog/*', :layout => :post
+page 'localizable/blog/posts/*', :layout => :post
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
@@ -45,35 +48,35 @@ page 'localizable/blog/*', :layout => :post
 
 activate :blog do |blog|
   # This will add a prefix to all links, template references and source paths
-  blog.permalink = "/{locale}/blog/{year}/{month}/{day}/{title}.html"
+  blog.prefix = "/{locale}"
+  blog.permalink = "/blog/posts/{year}/{month}/{day}/{title}.html"
   # Matcher for blog source files
-  blog.sources = "/{locale}/blog/{year}-{month}-{day}-{title}.html"
-  # blog.taglink = "tags/{tag}.html"
+  blog.sources = "/blog/posts/{year}-{month}-{day}-{title}.html"
   # blog.layout = "layout"
 
   # 'Regex or string that delimits the article summary from the rest of the article.'
   blog.summary_separator = /(READMORE)/
-
   blog.summary_length = 160
+
   # blog.default_extension = ".markdown.erb"
 
+  # blog.tag_template = "localizable/blog_tag.html"
+  # blog.taglink = "/{locale}/blog/posts/tag/{tag}.html"
+
+  # blog.calendar_template = "localizable/blog_calendar.html"
   blog.generate_year_pages = false
-  # blog.year_link = "{year}.html"
+  # blog.year_link = "/blog/posts/{year}.html"
+
   # blog.year_template = 'summary'
-
   blog.generate_month_pages = false
-  # blog.month_link = "{year}/{month}.html"
-
+  # blog.month_link = "/{locale}/blog/posts/{year}/{month}.html"
+  # blog.month_template = 'summary'
   blog.generate_day_pages = false
-  # blog.day_link = "{year}/{month}/{day}.html"
-
-  blog.tag_template = "tag.html"
-  blog.calendar_template = "calendar.html"
 
   # Enable pagination
   blog.paginate = true
-  # blog.per_page = 5
-  # blog.page_link = "page/{num}"
+  blog.per_page = 5
+  blog.page_link = "page/{num}"
 end
 
 

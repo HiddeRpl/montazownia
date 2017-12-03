@@ -1,6 +1,6 @@
 ---
 title: Example Article
-date: 2012-01-02
+date: 2011-05-02
 tags: example
 ---
 

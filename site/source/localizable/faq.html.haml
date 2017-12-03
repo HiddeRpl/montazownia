@@ -9,13 +9,13 @@ header: "F.A.Q."
     %h2
       %strong Tutaj odpowiemy na wszystkie wasze pytania
 %ul.faq-list
-  -get_faq_list.each do |item|
-    %li
-      %section
-        %header
-          %h3
-            %strong.question=item.question
-        %p.answer=item.answer
-        -if item.link
-          %h4=link_to(item.link.info, item.link.address, target: "_blank")
-      %hr
+-get_faq_list.each do |item|
+  %li
+    %section
+      %header
+        %h3
+          %strong.question=item.question
+      %p.answer=item.answer
+      -if item.link
+        %h4=link_to(item.link.info, item.link.address, target: "_blank")
+    %hr
