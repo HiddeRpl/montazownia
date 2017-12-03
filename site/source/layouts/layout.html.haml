@@ -1,8 +1,8 @@
 !!!
 %html{'lang' => I18n.locale}
-  =partial(:'layouts/partials/head')
+  =partial(:'layouts/main/head')
   %body
-    = partial(:'layouts/partials/nav')
+    = partial(:'layouts/main/nav')
     %main.mdl-layout__content
       .page-content
         %header
@@ -13,5 +13,5 @@
               =t(current_page.data.header)
         %article
           = yield
-        = partial(:'layouts/partials/footer')
-    = partial(:'layouts/partials/javascript_includes')
+        = partial(:'layouts/main/footer')
+    = partial(:'layouts/main/javascript_includes')
