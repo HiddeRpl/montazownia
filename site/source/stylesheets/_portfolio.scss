@@ -1,0 +1,46 @@
+@import "variables";
+
+.portfolio-wrapper {
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 30px;
+
+
+  &:after {
+    content: '';
+    flex: auto;
+  }
+
+  &__element {
+    margin: 10px 10px;
+    transition: 0.3s transform ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.5, 1.5);
+    }
+
+    img {
+      max-height: 200px;
+    }
+
+    &--opened {
+      transform: scale(1,1);
+    }
+  }
+}
+
+.dialog-content {
+  width: 800px;
+  top: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.dialog-image {
+  max-width: 900px;
+  max-height: 500px;
+  box-shadow: 0 9px 46px 8px rgba(0,0,0,.14), 0 11px 15px -7px rgba(0,0,0,.12), 0 24px 38px 3px rgba(0,0,0,.2)
+}
