@@ -4,7 +4,7 @@
 .sass-cache
 .idea
 build/
-site/calendar/client_secret.json
+**client_secret.json
 **Gemfile.lock
 site/build.log
 code.code-workspace

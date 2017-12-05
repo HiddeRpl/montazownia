@@ -9,9 +9,6 @@ gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 gem 'tilt', '~> 2.0.8'
 gem 'haml'
 
-# For feed.xml.builder
-gem "builder", "~> 3.0"
-
 # For markdown
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 
