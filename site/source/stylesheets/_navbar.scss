@@ -1,12 +1,14 @@
 @import "variables";
 
+.nav-bar {
+  position: fixed;
+}
+
 .active-lang img {
   height: 23px;
   width: auto;
   padding: 0 $baseline*3;
 }
-
-
 
 .other-lang {
   display: flex;

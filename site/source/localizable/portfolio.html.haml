@@ -4,7 +4,14 @@ ordinal: "2"
 dont_translate_header: true
 header: "Portfolio"
 ---
--sitemap.resources.select{ |r| r.path.start_with?("images/portfolio") }.each do |image|
-  %section
-    %figure
-      =image_tag(image.path.gsub('images/', ''), :class => "thumbnail", :alt => get_alt(image))
+%section.portfolio
+  .portfolio-wrapper
+    -sitemap.resources.select{ |r| r.path.start_with?("images/portfolio") }.each do |image|
+      %figure.portfolio-wrapper__element.openImage
+        =image_tag(image.path.gsub('images/', ''), :class => "thumbnail", :alt => get_alt(image))
+
+%dialog.mdl-dialog.dialog-content
+  .mdl-dialog__content
+    %img.dialog-image.dialogImg
+  .mdl-dialog__actions
+    %button.mdl-button.closeDialog{:type => "button"} Close
