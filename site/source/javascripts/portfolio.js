@@ -8,7 +8,7 @@ $(document).ready(function() {
 
     function resetImage() {
         document.querySelector('.dialogImg').setAttribute('src', '');
-        document.querySelector('.portfolio-wrapper__element--opened').classList.remove('portfolio-wrapper__element--opened');
+        // document.querySelector('.portfolio-wrapper__element--opened').classList.remove('portfolio-wrapper__element--opened');
     }
 
     if (! dialog.showModal) {
@@ -16,10 +16,10 @@ $(document).ready(function() {
     }
 
     showDialogButton.forEach(image => image.addEventListener('click', function() {
-        dialog.showModal();
         var imageSrc = image.childNodes[1].getAttribute('src');
+        dialog.showModal();
         document.querySelector('.dialogImg').setAttribute('src', imageSrc);
-        image.classList.add('portfolio-wrapper__element--opened');
+        // image.classList.add('portfolio-wrapper__element--opened');
     }));
     
     dialog.querySelector('.closeDialog').addEventListener('click', function() {
