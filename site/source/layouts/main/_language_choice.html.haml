@@ -1,4 +1,4 @@
-%span.active-lang.activeFlag
+%span.active-lang
   =image_tag("images/flags/#{current_lang}.png")
 
 %button#menu-lower-right.mdl-button.mdl-js-button.mdl-button--icon
@@ -9,5 +9,3 @@
       =link_to(translated_url(lang, current_page.data.id), :lang => lang, :class => "other-lang") do
         =image_tag("images/flags/#{lang}.png")
         %span=full_lang_name(lang)
-
--# menu and menuitem elements??

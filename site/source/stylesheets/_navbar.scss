@@ -28,6 +28,12 @@
     padding: 0;
     padding-right: $baseline;
   }
+
+  &--mobile img {
+    height: 23px;
+    width: auto;
+    padding: 16px;
+  }
 }
 
 .mdl-layout__obfuscator {
