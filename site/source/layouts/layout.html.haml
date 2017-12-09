@@ -9,13 +9,12 @@
   %body
     = partial(:'layouts/main/nav')
     %main.mdl-layout__content
-      .page-content
-        %header
-          %h1
-            -if current_page.data.dont_translate_header?
-              =current_page.data.header
-            -else
-              =t(current_page.data.header)
-        = yield
-        = partial(:'layouts/main/footer')
+      -#%header
+      -#  %h1
+      -#    -if current_page.data.dont_translate_header?
+      -#      =current_page.data.header
+      -#    -else
+      -#      =t(current_page.data.header)
+      = yield
+      = partial(:'layouts/main/footer')
     = partial(:'layouts/main/javascript_includes')

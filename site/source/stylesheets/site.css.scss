@@ -1,9 +1,10 @@
 @import 'variables';
+@import 'animations';
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #057ec4;
-  color: #d6d6d6;
+  background-color: $default-light;
+  color: $default-dark;
   text-align: center;
 }
 
@@ -22,8 +23,42 @@ button {
   outline: none;
 }
 
-.page-content {
-  margin-top: $baseline*20;
+.home__section {
+  height: 100vh;
+}
+
+.welcome-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.scroller {
+  position: absolute;
+  height: 30px;
+  width: 17px;
+  border-radius: 20px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 5vh;
+  border: 3px solid $default-dark;
+
+  &:after {
+    content: '';
+    height: 5px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 5px;
+    border: 2px solid $default-dark;
+    border-radius: 20px;
+    animation: scrollerMoving 1s infinite;
+  }
 }
 
 @import "navbar";

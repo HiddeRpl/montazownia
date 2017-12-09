@@ -3,16 +3,21 @@ $(document).ready(function() {
     /*
         ### NAVBAR TRANSPARENCY ###
     */
-    $(window).scroll(function () {
+    function navbarScroll() {
         const height = $(window).scrollTop();
 
         if (height > 100) {
-            $('.navbarTrans').removeClass('mdl-layout__header--transparent');
+            $('.navbarTrans').fadeIn('fast');
         }
 
         if (height === 0) {
-            $('.navbarTrans').addClass('mdl-layout__header--transparent');
+            $('.navbarTrans').fadeOut('fast');
         }
+    }
+    navbarScroll();
+
+    $(window).scroll(function () {
+        navbarScroll();
     });
     /*
         ### END ###

@@ -9,15 +9,6 @@
     max-width: 600px;
     column-count: 3;
   }
-  //display: flex;
-  //flex-wrap: wrap;
-  //justify-content: space-between;
-
-
-  //&:after {
-  //  content: '';
-  //  flex: auto;
-  //}
 
   &__element {
 
@@ -48,18 +39,9 @@
       background-color: rgba(0,0,0,0.5);
     }
 
-    //&:hover {
-    //  transform: scale(1.5, 1.5);
-    //}
-
     img {
-      //max-height: 200px;
       max-width: 170px;
     }
-
-    //&--opened {
-    //  transform: scale(1,1);
-    //}
   }
 }
 
