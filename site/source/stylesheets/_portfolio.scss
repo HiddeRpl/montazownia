@@ -37,8 +37,14 @@
       background-color: rgba(0,0,0,0.5);
     }
 
+    &:hover img {
+      height: 400px;
+      transform: rotate(15deg);
+    }
+
     img {
       height: 350px;
+      transition: height 0.3s ease-in, transform 0.3s ease-in;
     }
   }
 }
