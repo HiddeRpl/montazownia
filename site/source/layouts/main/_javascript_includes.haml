@@ -1,9 +1,7 @@
--# Z tego co mi wiadomo to chyba lepiej ładować takie biblioteki min z zewnętrznych serwerów, ponieważ wtedy jeżeli ktoś ma je na cache'u, nie musi robić dodatkowego requestu
-= javascript_include_tag "lib/DialogPolyfill/dialog-polyfill"
+= javascript_include_tag "lib/DialogPolyfill/dialog-polyfill.min"
 = javascript_include_tag "lib/jQuery/jquery.min"
 -if current_page.data.additional_javascripts?
   -current_page.data.additional_javascripts.each do |javascript|
     = javascript_include_tag javascript
 = javascript_include_tag "lib/MaterialDesignLite/material.min"
 = javascript_include_tag "site"
-    

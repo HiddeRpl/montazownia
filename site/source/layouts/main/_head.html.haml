@@ -17,7 +17,7 @@
 -if current_page.data.additional_stylesheets?
   -current_page.data.additional_stylesheets.each do |stylesheet|
     = stylesheet_link_tag stylesheet
-= stylesheet_link_tag "lib/DialogPolyfill/dialog-polyfill"
-= stylesheet_link_tag "lib/normalize/normalize"
+= stylesheet_link_tag "lib/DialogPolyfill/dialog-polyfill.min"
+= stylesheet_link_tag "lib/normalize/normalize.min"
 = stylesheet_link_tag "lib/MaterialDesignLite/material.min"
 = stylesheet_link_tag "site"
