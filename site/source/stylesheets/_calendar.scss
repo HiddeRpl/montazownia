@@ -25,6 +25,9 @@
 .fc-center {
   cursor: default;
   color: black;
+  h2 {
+    text-transform: capitalize;
+  }
 }
 
 .fc-unthemed td.fc-today {

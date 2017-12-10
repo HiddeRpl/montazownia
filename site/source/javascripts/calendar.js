@@ -30,6 +30,10 @@ $(document).ready(function () {
                     $(this).remove();
                 });
             }
+
+            var title = $('.fc-center h2').text();
+            var titleWithoutYear = title.substring(0, title.length - 5);
+            $('.fc-center h2').text(titleWithoutYear);
         },
         dayClick: function dayClick(date) {
             alert('Date: ' + date.format());
