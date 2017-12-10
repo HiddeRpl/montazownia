@@ -1,10 +1,13 @@
-$(document).ready(function() {
-    const isEnglish = window.location.href.includes("/en/");
-    const freeText = isEnglish? "Free term" : "Wolny termin";
-    const calendarDays =  isEnglish ? [ 'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'] : [ 'Niedziela', 'Poniedziałek', 'Wtorek', 'Środa', 'Czwartek', 'Piatek', 'Sobota'];
-    const calendarDaysShort = isEnglish ? ['Sun', 'Mon', 'Tu', 'Wed', 'Thu', 'Fri', 'Sat'] : ['Niedz', 'Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob']; 
+"use strict";
+
+$(document).ready(function () {
+    var lang = $('html')[0].lang;
+    console.log(lang);
+    var isEnglish = window.location.href.includes("/en/");
+    var freeText = isEnglish ? "Free term" : "Wolny termin";
     $('#calendar').fullCalendar({
         googleCalendarApiKey: 'AIzaSyBm05DfEhI2Zo0aX9_RO79FQUSxC1ae1xk',
+        locale: lang,
         header: {
             left: 'prev, next today',
             center: 'title',
@@ -12,19 +15,15 @@ $(document).ready(function() {
         },
         timeFormat: 'H:mm',
         firstDay: 1,
-        dayNames: calendarDays,
-        dayNamesShort: calendarDaysShort,
         displayEventEnd: true,
         eventColor: '#3a87ad',
-        eventSources: [
-            {
-                googleCalendarId: 'uud085v5uelfej5jgdfh0ddktk@group.calendar.google.com' //wolne
-            }
-        ],
-        eventAfterAllRender: function() {
+        events: {
+            googleCalendarId: 'uud085v5uelfej5jgdfh0ddktk@group.calendar.google.com'
+        },
+        eventAfterAllRender: function eventAfterAllRender() {
             $('.fc-title').text(freeText);
         },
-        dayClick: function(date) {
+        dayClick: function dayClick(date) {
             alert('Date: ' + date.format());
         }
     });

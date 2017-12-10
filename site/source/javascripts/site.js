@@ -1,10 +1,12 @@
-$(document).ready(function() {
+'use strict';
+
+$(document).ready(function () {
 
     /*
         ### NAVBAR TRANSPARENCY ###
     */
     function navbarScroll() {
-        const height = $(window).scrollTop();
+        var height = $(window).scrollTop();
 
         if (height > 100) {
             $('.navbarTrans').fadeIn('fast');
@@ -22,5 +24,4 @@ $(document).ready(function() {
     /*
         ### END ###
     */
-
 });

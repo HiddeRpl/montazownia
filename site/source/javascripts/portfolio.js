@@ -1,38 +1,40 @@
-$(document).ready(function() {
+'use strict';
+
+$(document).ready(function () {
 
     /*
         ### OPEN DIALOG WITH IMG ###
     */
-    const dialog = document.querySelector('dialog');
-    const showDialogButton = document.querySelectorAll('.openImage');
+    var dialog = document.querySelector('dialog');
+    var showDialogButton = document.querySelectorAll('.openImage');
 
     function resetImage() {
         document.querySelector('.dialogImg').setAttribute('src', '');
-        // document.querySelector('.portfolio-wrapper__element--opened').classList.remove('portfolio-wrapper__element--opened');
     }
 
-    if (! dialog.showModal) {
+    if (!dialog.showModal) {
         dialogPolyfill.registerDialog(dialog);
     }
 
-    showDialogButton.forEach(image => image.addEventListener('click', function() {
-        var imageSrc = image.childNodes[1].getAttribute('src');
-        dialog.showModal();
-        document.querySelector('.dialogImg').setAttribute('src', imageSrc);
-        // image.classList.add('portfolio-wrapper__element--opened');
-    }));
-    
-    dialog.querySelector('.closeDialog').addEventListener('click', function() {
+    showDialogButton.forEach(function (image) {
+        return image.addEventListener('click', function () {
+            var imageSrc = image.childNodes[1].getAttribute('src');
+            dialog.showModal();
+            document.querySelector('.dialogImg').setAttribute('src', imageSrc);
+        });
+    });
+
+    dialog.querySelector('.closeDialog').addEventListener('click', function () {
         dialog.close();
         resetImage();
     });
-    
+
     /*
     Close anywhere
     */
     dialog.addEventListener('click', function (event) {
         var rect = dialog.getBoundingClientRect();
-        var isInDialog=(rect.top <= event.clientY && event.clientY <= rect.top + rect.height && rect.left <= event.clientX && event.clientX <= rect.left + rect.width);
+        var isInDialog = rect.top <= event.clientY && event.clientY <= rect.top + rect.height && rect.left <= event.clientX && event.clientX <= rect.left + rect.width;
         if (!isInDialog) {
             dialog.close();
             resetImage();
@@ -41,5 +43,4 @@ $(document).ready(function() {
     /*
         ### END ###
     */
-
 });
