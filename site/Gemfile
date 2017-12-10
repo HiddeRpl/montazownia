@@ -18,3 +18,5 @@ gem 'nokogiri'
 #For minify
 gem 'babel-transpiler'
 
+#For nice output
+gem 'colorize'

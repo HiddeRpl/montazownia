@@ -2,6 +2,7 @@
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
 require 'babel/transpiler'
+require 'colorize'
 
 load "lib/language_helpers.rb"
 load "lib/translation_helpers.rb"
@@ -98,13 +99,16 @@ end
 
 configure :build do
   activate :minify_css
+
   Dir.foreach("source/javascripts/") do |jsfile|
     if File.extname(jsfile).eql?(".js")
+      puts "Compilation: #{jsfile}".blue
       read_source = File.read("source/javascripts/#{jsfile}")
       code_compiled = Babel::Transpiler.transform read_source
       write_source = File.open("source/javascripts/#{jsfile}", "w")
       write_source.write(code_compiled['code'])
+      puts "Compilation success".green
     end
   end
-    activate :minify_javascript
+  activate :minify_javascript
 end
