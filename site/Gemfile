@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'middleman', '~> 4.2'
-gem 'middleman-autoprefixer', '~> 2.7'
+gem 'middleman', '~> 4.2.1'
+gem 'middleman-autoprefixer', '~> 2.8'
 gem "middleman-blog"
 
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
@@ -13,4 +13,8 @@ gem 'haml'
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 
 # Summaries for the post
-gem "nokogiri"
+gem 'nokogiri'
+
+#For minify
+gem 'babel-transpiler'
+
