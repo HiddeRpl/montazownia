@@ -46,3 +46,11 @@
 .fc-unthemed .fc-content {
   white-space: normal;
 }
+
+.fc-bg td {
+  background-color: #dadada;
+}
+
+.fc-bg td.day--busy {
+  background-color: $page-primary;
+}

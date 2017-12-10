@@ -22,6 +22,14 @@ $(document).ready(function () {
         },
         eventAfterAllRender: function eventAfterAllRender() {
             $('.fc-title').text(freeText);
+
+            if ($('.fc-event-container')) {
+                $('.fc-event-container').each(function () {
+                    var index = $(this).index();
+                    $(this).closest('.fc-row').find('.fc-bg td').eq(index).addClass('day--busy');
+                    $(this).remove();
+                });
+            }
         },
         dayClick: function dayClick(date) {
             alert('Date: ' + date.format());
