@@ -3,19 +3,20 @@ id: "faq"
 ordinal: "4"
 dont_translate_header: true
 header: "F.A.Q."
+additional_javascripts:
+  - "faq.js"
 ---
 %section
   %header
     %h2
       %strong Tutaj odpowiemy na wszystkie wasze pytania
-%ul.faq-list
--get_faq_list.each do |item|
-  %li
-    %section
-      %header
-        %h3
-          %strong.question=item.question
-      %p.answer=item.answer
+  -get_faq_list.each do |item|
+    %article.question
+      %h4.question__title.showAnswer
+        %i.material-icons.question__title__icon.rotateIcon add
+        %strong=item.question
+      %p.question__answer.answerShown=item.answer
       -if item.link
-        %h4=link_to(item.link.info, item.link.address, target: "_blank")
-    %hr
+        %span.anchor=link_to(item.link.info, item.link.address, target: "_blank")
+
+        //make this span as a content of $p.question__answer.answerShown

@@ -2,7 +2,8 @@
 @import 'animations';
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  letter-spacing: 1.2px;
   background-color: $default-light;
   color: $default-dark;
   text-align: center;
@@ -25,6 +26,25 @@ button {
 
 .content__container {
   max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media (min-width: 768px) {
+  .content__container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .content__container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .content__container {
+    width: 1170px;
+  }
 }
 
 .home__section {
@@ -65,6 +85,11 @@ button {
   }
 }
 
+.anchor {
+  color: $page-primary
+}
+
 @import "navbar";
 @import "portfolio";
 @import "calendar";
+@import "faq";
