@@ -9,9 +9,8 @@ $(document).ready(function () {
         googleCalendarApiKey: 'AIzaSyBm05DfEhI2Zo0aX9_RO79FQUSxC1ae1xk',
         locale: lang,
         header: {
-            left: 'prev, next today',
-            center: 'title',
-            right: 'month, basicWeek, basicDay'
+            left: 'title',
+            right: 'prev, next'
         },
         timeFormat: 'H:mm',
         firstDay: 1,
@@ -22,6 +21,7 @@ $(document).ready(function () {
         },
         eventAfterAllRender: function eventAfterAllRender() {
             $('.fc-title').text(freeText);
+            $('.fc-clear, .fc-center').remove();
 
             if ($('.fc-event-container')) {
                 $('.fc-event-container').each(function () {
@@ -30,10 +30,6 @@ $(document).ready(function () {
                     $(this).remove();
                 });
             }
-
-            var title = $('.fc-center h2').text();
-            var titleWithoutYear = title.substring(0, title.length - 5);
-            $('.fc-center h2').text(titleWithoutYear);
         },
         dayClick: function dayClick(date) {
             alert('Date: ' + date.format());

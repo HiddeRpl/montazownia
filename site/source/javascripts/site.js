@@ -7,13 +7,18 @@ $(document).ready(function () {
     */
     function navbarScroll() {
         var height = $(window).scrollTop();
+        var urlArray = location.pathname.split('/');
 
-        if (height > 100) {
-            $('.navbarTrans').fadeIn('fast');
-        }
+        if (urlArray[2] !== "") {
+            $('.navbarTrans').show();
+        } else {
+            if (height > 100) {
+                $('.navbarTrans').fadeIn('fast');
+            }
 
-        if (height === 0) {
-            $('.navbarTrans').fadeOut('fast');
+            if (height === 0) {
+                $('.navbarTrans').fadeOut('fast');
+            }
         }
     }
     navbarScroll();

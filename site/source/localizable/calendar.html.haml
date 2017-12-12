@@ -15,20 +15,18 @@ additional_javascripts:
 ---
 %section
   %header
-    %h4 tutaj znajdziecie wszystkie wolne terminy
-  %p
-    Zapraszamy do kontaktowanie się przez:
-    %ul.contact-list
-      %li
-        %strong telefon
-      %li
-        %strong maila
-      %li
-        %strong
-          -# tutaj na mobilke trzeba dodać m. przed facebook
-          =link_to('fanpage na fejsie', "https://facebok.com/messages/Montazownia")
-%section
-  %figure
-    %figcaption
-      %h3 pick a date to start booking
+    %h3.section__header WOLNE TERMINY
+  .section__header-separotor
+  %article.contact
+    %p Skontaktuj się z nami w celu umówienia sesji lub wybierz datę
+    %div.contact__element
+      %i.material-icons.contact__social-icons smartphone
+      %span 666-666-666
+    %div.contact__element
+      %i.material-icons.contact__social-icons email
+      %span montazownia.tattoo@gmail.com
+    %div.contact__element
+      =image_tag("images/site/facebook-icon.png", class: "contact__social-icons")
+      =link_to("Montażownia", "https://www.facebook.com/Montazownia/", class: "anchor")
+  %div
     #calendar

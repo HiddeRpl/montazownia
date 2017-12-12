@@ -7,6 +7,9 @@ additional_javascripts:
   - "portfolio.js"
 ---
 %section.portfolio
+  %header
+    %h3.section__header PORTFOLIO
+  .section__header-separotor
   .portfolio-wrapper
     -sitemap.resources.select{ |r| r.path.start_with?("images/portfolio") }.each do |image|
       %figure.portfolio-wrapper__element.openImage
