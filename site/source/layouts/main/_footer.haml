@@ -1,13 +1,10 @@
+.footer-separtor
 %footer
-  %ul
-    %h5
-      %li
-        .socialmedia-link=link_to("Facebook",
-          "http://facebook.com/montazownia",
-          target: "_blank")
-    %h5
-      %li
-        .socialmedia-link=link_to("Instagram",
-          "http://instagram.com/montazownia",
-          target: "_blank")
-  %h6 Copyright
+  %section.content__container.footer__container
+    .footer__element
+      &copy; Montażownia
+    .footer__element
+      = link_to 'http://facebook.com/montazownia' do
+        = image_tag 'images/site/facebook-icon.png', class: 'footer__social-icons'
+      = link_to 'http://instagram.com/montazownia' do
+        = image_tag 'images/site/insta-icon.png', class: 'footer__social-icons'

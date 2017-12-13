@@ -14,6 +14,7 @@ $(document).ready(function () {
         },
         timeFormat: 'H:mm',
         firstDay: 1,
+        contentHeight: 500,
         displayEventEnd: true,
         eventColor: '#3a87ad',
         events: {
