@@ -17,6 +17,31 @@
   }
 }
 
+.legend {
+  margin-bottom: 2em;
+
+  &__color {
+    display:flex;
+
+    &__el {
+      height: 20px;
+      width: 30px;
+      border: 2px solid $page-secondary;
+      margin-left: 1em;
+      margin-right: 1em;
+      border-radius: 5px;
+
+      &--free {
+        background-color: $free-term;
+      }
+
+      &--busy {
+        background-color: $busy-term
+      }
+    }
+  }
+}
+
 #calendar {
   margin: auto;
 }
@@ -70,9 +95,9 @@
 }
 
 .fc-bg td {
-  background-color: #f3f3f3;
+  background-color: $busy-term;
 }
 
-.fc-bg td.day--busy {
-  background-color: $page-primary;
+.fc-bg td.day--free {
+  background-color: $free-term;
 }

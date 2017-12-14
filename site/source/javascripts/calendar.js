@@ -27,7 +27,7 @@ $(document).ready(function () {
             if ($('.fc-event-container')) {
                 $('.fc-event-container').each(function () {
                     var index = $(this).index();
-                    $(this).closest('.fc-row').find('.fc-bg td').eq(index).addClass('day--busy');
+                    $(this).closest('.fc-row').find('.fc-bg td').eq(index).addClass('day--free');
                     $(this).remove();
                 });
             }

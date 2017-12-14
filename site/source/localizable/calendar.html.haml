@@ -28,5 +28,12 @@ additional_javascripts:
     %div.contact__element
       =image_tag("images/site/facebook-icon.png", class: "contact__social-icons")
       =link_to("Montażownia", "https://www.facebook.com/Montazownia/", class: "anchor")
+  %article.legend
+    %h6 Legenda
+    .legend__color
+      .legend__color__el.legend__color__el--free
+      %span.legend__text__el Wolny termin
+      .legend__color__el.legend__color__el--busy
+      %span.legend__text__el Zajęty termin
   %div
     #calendar
