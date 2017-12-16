@@ -1,5 +1,7 @@
 ---
 pl:
+  dialogs:
+    close: "Zamknij"
   paths:
     calendar: "wolne-terminy"
     faq: "pytania-i-odpowiedzi"

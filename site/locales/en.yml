@@ -1,5 +1,7 @@
 ---
 en:
+  dialogs:
+    close: "Close"
   paths:
     calendar: "free-terms"
     guide: "tattoo-care"

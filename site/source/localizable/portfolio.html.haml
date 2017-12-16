@@ -11,12 +11,17 @@ additional_javascripts:
     %h3.section__header PORTFOLIO
   .section__header-separotor
   .portfolio-wrapper
+    -i=0
     -sitemap.resources.select{ |r| r.path.start_with?("images/portfolio") }.each do |image|
       %figure.portfolio-wrapper__element.openImage
-        =image_tag(image.path.gsub('images/', ''), :class => "thumbnail", :alt => get_alt(image))
+        =image_tag(image.path.gsub('images/', ''),
+         :class => "thumbnail",
+          :alt => get_alt(image),
+          :data_index => :i)
+        -i+=1
 
 %dialog.mdl-dialog.dialog-content
   .mdl-dialog__content
     %img.dialog-image.dialogImg
   .mdl-dialog__actions
-    %button.mdl-button.closeDialog{:type => "button"} Close
+    %button.mdl-button.closeDialog{:type => "button"}=t("dialogs.close")
