@@ -31,6 +31,8 @@ set :haml, { :format => :html5 }
 activate :i18n, :path => "/:locale/", :langs => [:pl, :en] , :mount_at_root => false
 activate :directory_indexes
 
+set :images_dir, 'assets/images'
+
 #desactive warnings
 Haml::TempleEngine.disable_option_validator!
 
@@ -111,4 +113,5 @@ configure :build do
     end
   end
   activate :minify_javascript
+  activate :asset_hash
 end

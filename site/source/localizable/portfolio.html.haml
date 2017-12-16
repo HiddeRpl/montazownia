@@ -11,9 +11,9 @@ additional_javascripts:
     %h3.section__header PORTFOLIO
   .section__header-separotor
   .portfolio-wrapper
-    -sitemap.resources.select{ |r| r.path.start_with?("images/portfolio") }.each_with_index do |image, index|
+    -sitemap.resources.select{ |r| r.path.start_with?("assets/images/portfolio") }.each_with_index do |image, index|
       %figure.portfolio-wrapper__element.openImage
-        =image_tag(image.path.gsub('images/', ''),
+        =image_tag(image.path.gsub('assets/images/', ''),
          :class => "thumbnail",
           :alt => get_alt(image),
           :data_index => index)

@@ -9,7 +9,7 @@ list:
     answer: "Tak, boli. Z tym, że niektórzy lubią ten ból ;). Dużo zależy też od miejsca."
     link:
       info: "Spójrz na ten obrazek"
-      address: "images/site/pain_map.jpg"
+      address: "assets/images/site/pain_map.jpg"
   - question: "Jak powinienem się przygotować?"
     answer: "Miejsce pod tatuaż możesz smarować 2 tyg. wcześniej kremem, wtedy pigment wchłonie się lepiej. Zdrowy tryb życia też pomaga. No i nastaw się mentalnie na posiadanie nowej dziarki :)"
   - question: "Czy mogę iść na siłownię po tatuażu?"

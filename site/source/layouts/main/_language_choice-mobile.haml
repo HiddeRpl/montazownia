@@ -1,7 +1,7 @@
 %span.active-lang
-  =image_tag("images/flags/#{current_lang}.png")
+  =image_tag("flags/#{current_lang}.png")
 
 - other_langs.each do |lang|
   %span.other-lang--mobile
     =link_to(translated_url(lang, current_page.data.id), :lang => lang, :class => "other-lang") do
-      =image_tag("images/flags/#{lang}.png")
+      =image_tag("flags/#{lang}.png")

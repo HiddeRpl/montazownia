@@ -1,5 +1,5 @@
 %span.active-lang
-  =image_tag("images/flags/#{current_lang}.png")
+  =image_tag("flags/#{current_lang}.png")
 
 %button#menu-lower-right.mdl-button.mdl-js-button.mdl-button--icon
   %i.material-icons more_vert
@@ -7,5 +7,5 @@
   - other_langs.each do |lang|
     %li.mdl-menu__item.active-lang
       =link_to(translated_url(lang, current_page.data.id), :lang => lang, :class => "other-lang") do
-        =image_tag("images/flags/#{lang}.png")
+        =image_tag("flags/#{lang}.png")
         %span=full_lang_name(lang)

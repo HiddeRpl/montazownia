@@ -9,7 +9,7 @@ module PageHelpers
     
 
   def get_alt(image)
-    name = image.path.gsub("images/portfolio/", '').gsub(".", "")
+    name = image.path.gsub("assets/images/portfolio/", '').gsub(".", "")
     data.alts.list.each do |alt|
       if alt.name.to_s.eql? name.to_s
         if check_language "pl"

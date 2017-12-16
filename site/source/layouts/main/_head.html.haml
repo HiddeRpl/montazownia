@@ -11,9 +11,9 @@
       :href => "http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700"}
 %link{:rel => :stylesheet, :type => :"text/css",
       :href => "https://fonts.googleapis.com/icon?family=Material+Icons"}
-%link{:rel => 'icon', :type => 'image/png', :sizes => '16x16', :href => '/images/favicons/favicon-16x16.png'}
-%link{:rel => 'icon', :type => 'image/png', :sizes => '32x32', :href => '/images/favicons/favicon-32x32.png'}
-%link{:rel => 'icon', :type => 'image/png', :sizes => '96x96', :href => '/images/favicons/favicon-96x96.png'}
+%link{:rel => 'icon', :type => 'image/png', :sizes => '16x16', :href => '/assets/images/favicons/favicon-16x16.png'}
+%link{:rel => 'icon', :type => 'image/png', :sizes => '32x32', :href => '/assets/images/favicons/favicon-32x32.png'}
+%link{:rel => 'icon', :type => 'image/png', :sizes => '96x96', :href => '/assets/images/favicons/favicon-96x96.png'}
 -if current_page.data.additional_stylesheets?
   -current_page.data.additional_stylesheets.each do |stylesheet|
     = stylesheet_link_tag stylesheet
