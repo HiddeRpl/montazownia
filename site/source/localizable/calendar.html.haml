@@ -17,24 +17,25 @@ additional_javascripts:
   %header
     %h3.section__header WOLNE TERMINY
   .section__header-separotor
-  %article.contact
-    %p Skontaktuj się z nami w celu umówienia sesji lub wybierz datę
-    %div.contact__element
-      %i.material-icons.contact__social-icons smartphone
-      %span 666-666-666
-    %div.contact__element
-      %i.material-icons.contact__social-icons email
-      %span montazownia.tattoo@gmail.com
-    %div.contact__element
-      =image_tag("images/site/facebook-icon.png", class: "contact__social-icons")
-      =link_to("Montażownia", "https://www.facebook.com/Montazownia/", class: "anchor")
-  %article.legend
-    %h6 Legenda
-    .legend__color
-      .legend__color__el.legend__color__el--free
-      %span.legend__text__el Wolny termin
-      .legend__color__el.legend__color__el--busy
-      %span.legend__text__el Zajęty termin
+  .information-wrapper
+    %article.contact.information-left
+      %h6 Skontaktuj się z nami!
+      %div.contact__element
+        %i.material-icons.contact__social-icons smartphone
+        %span 666-666-666
+      %div.contact__element
+        %i.material-icons.contact__social-icons email
+        %span montazownia.tattoo@gmail.com
+      %div.contact__element
+        =image_tag("images/site/facebook-icon.png", class: "contact__social-icons")
+        =link_to("Montażownia", "https://www.facebook.com/Montazownia/", class: "anchor")
+    %article.legend.information-right
+      %h6 Legenda
+      .legend__color
+        .legend__color__el.legend__color__el--free
+        %span.legend__text__el Wolny termin
+        .legend__color__el.legend__color__el--busy
+        %span.legend__text__el Zajęty termin
   %figure
     #calendar
   %figure

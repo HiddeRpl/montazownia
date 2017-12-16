@@ -109,3 +109,15 @@
 .fc-bg td.day--free {
   background-color: $free-term;
 }
+
+.information-wrapper{
+  display: flex;
+}
+
+.information-left{
+  flex: 0 0 65%;
+}
+
+.information-right{
+  flex: 1;
+}
