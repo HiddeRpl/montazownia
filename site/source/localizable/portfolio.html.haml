@@ -11,14 +11,12 @@ additional_javascripts:
     %h3.section__header PORTFOLIO
   .section__header-separotor
   .portfolio-wrapper
-    -i=0
-    -sitemap.resources.select{ |r| r.path.start_with?("images/portfolio") }.each do |image|
+    -sitemap.resources.select{ |r| r.path.start_with?("images/portfolio") }.each_with_index do |image, index|
       %figure.portfolio-wrapper__element.openImage
         =image_tag(image.path.gsub('images/', ''),
          :class => "thumbnail",
           :alt => get_alt(image),
-          :data_index => :i)
-        -i+=1
+          :data_index => index)
 
 %dialog.mdl-dialog.dialog-content
   .mdl-dialog__content.centered-wrapper
