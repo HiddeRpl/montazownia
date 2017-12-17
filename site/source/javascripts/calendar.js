@@ -1,10 +1,16 @@
 "use strict";
 
 $(document).ready(function () {
+    var dictionary={
+        "pl":{
+            freeTerm: "Wolny termin"
+        },
+        "en":{
+            freeTerm: "Free term"
+        }
+    };
     var lang = $('html')[0].lang;
-    console.log(lang);
-    var isEnglish = window.location.href.includes("/en/");
-    var freeText = isEnglish ? "Free term" : "Wolny termin";
+    var freeText = dictionary[lang][freeTerm];
     $('#calendar').fullCalendar({
         googleCalendarApiKey: 'AIzaSyBm05DfEhI2Zo0aX9_RO79FQUSxC1ae1xk',
         locale: lang,
@@ -20,6 +26,9 @@ $(document).ready(function () {
         events: {
             googleCalendarId: 'uud085v5uelfej5jgdfh0ddktk@group.calendar.google.com'
         },
+        eventAfterRender: function eventAfterRender(event, element, view){
+            console.log(event.start)
+        },
         eventAfterAllRender: function eventAfterAllRender() {
             $('.fc-title').text(freeText);
             $('.fc-clear, .fc-center').remove();
@@ -31,9 +40,9 @@ $(document).ready(function () {
                     $(this).remove();
                 });
             }
-        },
-        dayClick: function dayClick(date) {
-            alert('Date: ' + date.format());
         }
+        // dayClick: function dayClick(date) {
+        //     alert('Date: ' + date.format());
+        // }
     });
 });
