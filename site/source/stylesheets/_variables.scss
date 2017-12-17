@@ -10,5 +10,5 @@ $default-dark: #000;
 
 //Calendar colors
 $free-term: $page-primary;
-$free-partialy-term: saturation($page-primary);
+$free-partialy-term: $page-primary--darker;
 $busy-term: #f3f3f3;

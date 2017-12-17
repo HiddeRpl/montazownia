@@ -33,6 +33,7 @@ $(document).ready(function () {
                 $('.fc-event-container').each(function () {
                     var index = $(this).index();
                     var dayStyleClass;
+                    console.log(event.allDay)
                     if (event.allDay){
                         dayStyleClass='day--free';
                     }
