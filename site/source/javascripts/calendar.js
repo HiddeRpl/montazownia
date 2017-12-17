@@ -10,7 +10,7 @@ $(document).ready(function () {
         }
     };
     var lang = $('html')[0].lang;
-    var freeText = dictionary[lang]["freeTerm"];
+
     $('#calendar').fullCalendar({
         googleCalendarApiKey: 'AIzaSyBm05DfEhI2Zo0aX9_RO79FQUSxC1ae1xk',
         locale: lang,
@@ -27,18 +27,18 @@ $(document).ready(function () {
             googleCalendarId: 'uud085v5uelfej5jgdfh0ddktk@group.calendar.google.com'
         },
         eventAfterRender: function eventAfterRender(event, element, view){
-            console.log(event.start);
-            console.log("Hej render event");
-        },
-        eventAfterAllRender: function eventAfterAllRender() {
-            console.log("Hej render all evenets");
-            $('.fc-title').text(freeText);
+            $('.fc-title').text(dictionary[lang]["freeTerm"]);
             $('.fc-clear, .fc-center').remove();
-
             if ($('.fc-event-container')) {
                 $('.fc-event-container').each(function () {
                     var index = $(this).index();
-                    $(this).closest('.fc-row').find('.fc-bg td').eq(index).addClass('day--free');
+                    var dayStyleClass;
+                    if (event.allDay){
+                        dayStyleClass='day--free';
+                    }
+                    else
+                        dayStyleClass='day--partialy--free';
+                    $(this).closest('.fc-row').find('.fc-bg td').eq(index).addClass(dayStyleClass);
                     $(this).remove();
                 });
             }
