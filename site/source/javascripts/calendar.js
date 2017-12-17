@@ -10,7 +10,6 @@ $(document).ready(function () {
         }
     };
     var lang = $('html')[0].lang;
-
     $('#calendar').fullCalendar({
         googleCalendarApiKey: 'AIzaSyBm05DfEhI2Zo0aX9_RO79FQUSxC1ae1xk',
         locale: lang,
@@ -26,16 +25,13 @@ $(document).ready(function () {
         events: {
             googleCalendarId: 'uud085v5uelfej5jgdfh0ddktk@group.calendar.google.com'
         },
-        // eventAfterRender: function eventAfterRender(event, element, view){
-        //     console.log(event.allDay)
-        //     view['type']=(event.allDay) ? 'day--free' :'day--partialy--free';
-        // },
-        eventAfterAllRender: function eventAfterRender(view){
-            $('.fc-title').text(dictionary[lang]["freeTerm"]);
+        eventAfterAllRender: function eventAfterAllRender() {
+            $('.fc-title').text(dictionary[lang]['freeTerm']);
             $('.fc-clear, .fc-center').remove();
+
             if ($('.fc-event-container')) {
                 $('.fc-event-container').each(function () {
-                    var index = $(this).index(); 
+                    var index = $(this).index();
                     $(this).closest('.fc-row').find('.fc-bg td').eq(index).addClass('day--free');
                     $(this).remove();
                 });
