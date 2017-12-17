@@ -1,11 +1,11 @@
 "use strict";
 
 $(document).ready(function () {
-    var dictionary={
-        "pl":{
+    var dictionary = {
+        "pl": {
             freeTerm: "Wolny termin"
         },
-        "en":{
+        "en": {
             freeTerm: "Free term"
         }
     };

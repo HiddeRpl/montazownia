@@ -1,23 +1,23 @@
 %meta{'charset' => 'utf-8'}
-%meta{'http-equiv' => 'x-ua-compatible', 'content' => 'ie=edge'}
+%meta{'http-equiv' => 'x-ua-compatible', 'content' => 'ie=edge,chrome=1'}
 %meta{'name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no' }
 %meta{'http-equiv' => 'Last-Modified', 'content' => get_current_time}
+
 %meta{'name' => 'geo.position', 'content' => '52.39792742; 16.92453504'}
-%meta{'name' => 'geo.placename', 'content' => 'ul. Różana 6/LU1, Poznań 61-577, PL'}
+%meta{'name' => 'geo.placename', 'content' => 'ul. Różana 6, Poznań 61-577, PL'}
 %meta{'name' => 'geo.region', 'content' => 'POL-Poland'}
 %meta{'name' => 'ICBM', 'content' => '52.39792742; 16.92453504'}
 %meta{'name' => 'generator', 'content' => 'middleman'}
-%link{:rel => :stylesheet, :type => :"text/css",
-      :href => "http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700"}
-%link{:rel => :stylesheet, :type => :"text/css",
-      :href => "https://fonts.googleapis.com/icon?family=Material+Icons"}
-%link{:rel => 'icon', :type => 'image/png', :sizes => '16x16', :href => '/assets/images/favicons/favicon-16x16.png'}
-%link{:rel => 'icon', :type => 'image/png', :sizes => '32x32', :href => '/assets/images/favicons/favicon-32x32.png'}
-%link{:rel => 'icon', :type => 'image/png', :sizes => '96x96', :href => '/assets/images/favicons/favicon-96x96.png'}
+
+-get_fonts.each do |font|
+  %link{:rel=>:stylesheet, :type => :"text/css", :href => "#{font}"}
+
+-['16x16', '32x32', '96x96'].each do |icon_size|
+  %link{:rel => 'icon', :type => 'image/png', :sizes => '16x16', :href => "/assets/images/favicons/favicon-#{icon_size}.png"}
+
+-["lib/DialogPolyfill/dialog-polyfill.min", "lib/normalize/normalize.min", "lib/MaterialDesignLite/material.min", "site"].each do |stylesheet|
+  =stylesheet_link_tag stylesheet
+
 -if current_page.data.additional_stylesheets?
   -current_page.data.additional_stylesheets.each do |stylesheet|
     = stylesheet_link_tag stylesheet
-= stylesheet_link_tag "lib/DialogPolyfill/dialog-polyfill.min"
-= stylesheet_link_tag "lib/normalize/normalize.min"
-= stylesheet_link_tag "lib/MaterialDesignLite/material.min"
-= stylesheet_link_tag "site"
