@@ -9,9 +9,9 @@ module UtilityHelpers
 
   def get_fonts
     fonts = ["https://fonts.googleapis.com/icon?family=Material+Icons", "http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700"]
-    Dir.foreach("source/assets/fonts/") do |font|
+    Dir.foreach("source/assets/fonts/styles") do |font|
       if ![".", ".."].include? font.to_s
-        fonts.push("/assets/fonts/#{font}")
+        fonts.push("/assets/fonts/styles/#{font}")
       end
     end
     return fonts

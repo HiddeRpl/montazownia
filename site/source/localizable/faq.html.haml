@@ -15,7 +15,8 @@ additional_javascripts:
       %h4.question__title.showAnswer
         %i.material-icons.question__title__icon.rotateIcon add
         %strong=item.question
-      %p.question__answer.answerShown=item.answer
-      -if item.link
-        %span.anchor=link_to(item.link.info, item.link.address, target: "_blank")
+      %p.question__answer.answerShown
+        =item.answer
+        -if item.link
+          %span.anchor=link_to(item.link.info, item.link.address, target: "_blank")
     %hr.question__separator
