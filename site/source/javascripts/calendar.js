@@ -26,20 +26,17 @@ $(document).ready(function () {
         events: {
             googleCalendarId: 'uud085v5uelfej5jgdfh0ddktk@group.calendar.google.com'
         },
-        eventAfterRender: function eventAfterRender(event, element, view){
+        // eventAfterRender: function eventAfterRender(event, element, view){
+        //     console.log(event.allDay)
+        //     view['type']=(event.allDay) ? 'day--free' :'day--partialy--free';
+        // },
+        eventAfterAllRender: function eventAfterRender(view){
             $('.fc-title').text(dictionary[lang]["freeTerm"]);
             $('.fc-clear, .fc-center').remove();
             if ($('.fc-event-container')) {
                 $('.fc-event-container').each(function () {
-                    var index = $(this).index();
-                    var dayStyleClass;
-                    console.log(event.allDay)
-                    if (event.allDay){
-                        dayStyleClass='day--free';
-                    }
-                    else
-                        dayStyleClass='day--partialy--free';
-                    $(this).closest('.fc-row').find('.fc-bg td').eq(index).addClass(dayStyleClass);
+                    var index = $(this).index(); 
+                    $(this).closest('.fc-row').find('.fc-bg td').eq(index).addClass('day--free');
                     $(this).remove();
                 });
             }
