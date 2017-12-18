@@ -1,6 +1,18 @@
 @import 'variables';
 @import 'animations';
 
+@font-face {
+  font-family: "Carolina";
+  src: url("../assets/fonts/carolina.ttf"); }
+
+@font-face {
+  font-family: "Gidole";
+  src: url("../assets/fonts/gidole.otf"); }
+
+@font-face {
+  font-family: "Prequel";
+  src: url("../assets/fonts/prequel.ttf"); }
+
 body {
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 1.2px;
@@ -21,6 +33,10 @@ a {
 
 button {
   outline: none;
+}
+
+figure {
+  margin: 0;
 }
 
 .content__container {
@@ -47,6 +63,11 @@ button {
   .content__container {
     width: 1170px;
   }
+}
+
+.halign-wrapper{
+  display: flex;
+  justify-content: center;
 }
 
 .valign-wrapper {

@@ -26,6 +26,7 @@ footer {
     width: 50%;
     &:last-of-type {
       display: flex;
+      justify-content: flex-end;
     }
   }
 }

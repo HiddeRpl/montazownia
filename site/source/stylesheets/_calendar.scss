@@ -1,20 +1,31 @@
 @import "variables";
 
 .contact {
-  margin-bottom: 6em;
 
-  &__element {
-    display: flex;
-    align-items: center;
+  &-wrapper {
+    margin-bottom: 6em;
   }
 
-  &__social-icons {
-    padding: 5px 10px;
+  &__info {
+    flex-basis: 50%;
+
+    &__element {
+      display: flex;
+      align-items: center;
+    }
+
+    &__social-icons {
+      padding: 5px 10px;
+    }
   }
 
-  img.contact__social-icons {
-    height: 23px;
+  &__map {
+    flex-basis: 50%;
   }
+}
+
+img.contact__info__social-icons {
+  height: 23px;
 }
 
 .legend {
@@ -47,10 +58,8 @@
 }
 
 #map {
-  margin: auto;
   width: 100%;
-  height: 400px;
-  background-color: grey;
+  height: 100%;
 }
 
 
@@ -76,8 +85,13 @@
 }
 
 .fc-left {
+  order: 0;
+}
+
+.fc-center {
   cursor: default;
   color: black;
+  order: 1;
   h2 {
     text-transform: capitalize;
     font-size: 2em;
@@ -87,6 +101,14 @@
       font-size: 1.9em;
     }
   }
+}
+
+.fc-right {
+  order: 2;
+}
+
+#calendar .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 0.3em;
 }
 
 .fc-unthemed td.fc-today {
@@ -108,16 +130,4 @@
 
 .fc-bg td.day--free {
   background-color: $free-term;
-}
-
-.information-wrapper{
-  display: flex;
-}
-
-.information-left{
-  flex: 0 0 65%;
-}
-
-.information-right{
-  flex: 1;
 }

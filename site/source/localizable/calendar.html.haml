@@ -12,32 +12,36 @@ additional_javascripts:
   - "lib/FullCalendar/es"
   - "lib/gCal/gcal.min"
   - "calendar.js"
+  - "map.js"
+  - "https://maps.googleapis.com/maps/api/js?key=AIzaSyCc008w_NpJfOS9d5TTy9J8-4ER_FrlIKk&callback=initMap"
 ---
 %section
   %header
     %h3.section__header WOLNE TERMINY
   .section__header-separotor
-  .information-wrapper
-    %article.contact.information-left
-      %h6 Skontaktuj się z nami!
-      %div.contact__element
-        %i.material-icons.contact__social-icons smartphone
+  .mdl-grid.contact-wrapper
+    %article.mdl-cell--6-col.contact__info
+      %p Skontaktuj się z nami w celu umówienia sesji lub wybierz datę
+      .contact__info__element
+        %i.material-icons.contact__info__social-icons smartphone
         %span 666-666-666
-      %div.contact__element
-        %i.material-icons.contact__social-icons email
+      .contact__info__element
+        %i.material-icons.contact__info__social-icons store
+        %span ul. Różana 6, Poznań 61-577
+      .contact__info__element
+        %i.material-icons.contact__info__social-icons email
         %span montazownia.tattoo@gmail.com
-      %div.contact__element
-        =image_tag("site/facebook-icon.png", class: "contact__social-icons")
-        =link_to("Montażownia", "https://m.me/Montazownia", class: "anchor")
-    %article.legend.information-right
-      %h6 Legenda
-      .legend__color
-        .legend__color__el.legend__color__el--free
-        %span.legend__text__el Wolny termin
-        .legend__color__el.legend__color__el--busy
-        %span.legend__text__el Zajęty termin
+      .contact__info__element
+        =image_tag("site/facebook-icon.png", class: "contact__info__social-icons")
+        =link_to("Montażownia", "https://m.me/Montazownia/", class: "anchor", target: "_blank")
+    %figure.mdl-cell--6-col.contact__map
+      #map
+  %article.legend
+    %h6 Legenda
+    .legend__color
+      .legend__color__el.legend__color__el--free
+      %span.legend__text__el Wolny termin
+      .legend__color__el.legend__color__el--busy
+      %span.legend__text__el Zajęty termin
   %figure
     #calendar
-  %figure
-    #map
-    = partial(:'localizable/partials/map')

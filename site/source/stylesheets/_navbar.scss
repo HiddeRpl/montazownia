@@ -11,6 +11,11 @@
   & &__link {
     color: $default-dark;
   }
+
+  &__title {
+    font-family: 'Carolina', sans-serif;
+    letter-spacing: 3px;
+  }
 }
 
 .active-lang img {

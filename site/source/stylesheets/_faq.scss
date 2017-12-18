@@ -1,8 +1,12 @@
 @import "variables";
 
 .question {
-  border: none;
-  padding: 1em;
+  border-bottom: 2px solid $page-secondary;
+  padding: 2em 1em;
+
+  &:last-of-type {
+    border: none;
+  }
 
   &__title {
     margin: 0;

@@ -14,8 +14,9 @@ $(document).ready(function () {
         googleCalendarApiKey: 'AIzaSyBm05DfEhI2Zo0aX9_RO79FQUSxC1ae1xk',
         locale: lang,
         header: {
-            left: 'title',
-            right: 'prev, next'
+            left: 'prev',
+            center: 'title',
+            right: 'next'
         },
         timeFormat: 'H:mm',
         firstDay: 1,
@@ -27,7 +28,7 @@ $(document).ready(function () {
         },
         eventAfterAllRender: function eventAfterAllRender() {
             $('.fc-title').text(dictionary[lang]['freeTerm']);
-            $('.fc-clear, .fc-center').remove();
+            $('.fc-clear').remove();
 
             if ($('.fc-event-container')) {
                 $('.fc-event-container').each(function () {
