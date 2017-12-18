@@ -9,5 +9,6 @@ $default-light: #FFF;
 $default-dark: #000;
 
 //Calendar colors
-$free-term: $page-primary;
+$free-term: $page-primary--lighter;
 $busy-term: #f3f3f3;
+$partially-term: $page-primary--darker;

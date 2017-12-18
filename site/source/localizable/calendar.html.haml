@@ -32,7 +32,7 @@ additional_javascripts:
         %i.material-icons.contact__info__social-icons email
         %span montazownia.tattoo@gmail.com
       .contact__info__element
-        =image_tag("site/facebook-icon.png", class: "contact__info__social-icons")
+        =image_tag("site/facebook-messenger.png", class: "contact__info__social-icons")
         =link_to("Montażownia", "https://m.me/Montazownia/", class: "anchor", target: "_blank")
     %figure.mdl-cell--6-col.contact__map
       #map
@@ -41,6 +41,8 @@ additional_javascripts:
     .legend__color
       .legend__color__el.legend__color__el--free
       %span.legend__text__el Wolny termin
+      .legend__color__el.legend__color__el--partially
+      %span.legend__text__el Zajęty częściowo termin
       .legend__color__el.legend__color__el--busy
       %span.legend__text__el Zajęty termin
   %figure

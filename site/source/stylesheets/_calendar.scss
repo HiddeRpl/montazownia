@@ -49,6 +49,10 @@ img.contact__info__social-icons {
       &--busy {
         background-color: $busy-term
       }
+
+      &--partially {
+        background-color: $partially-term;
+      }
     }
   }
 }
@@ -130,4 +134,8 @@ img.contact__info__social-icons {
 
 .fc-bg td.day--free {
   background-color: $free-term;
+}
+
+.fc-bg td.day--partially {
+  background-color: $partially-term;
 }
