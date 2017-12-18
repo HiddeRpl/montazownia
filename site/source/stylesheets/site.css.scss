@@ -95,6 +95,9 @@ figure {
   position: relative;
   justify-content: center;
   flex-direction: column;
+  .welcome__text__title {
+    font-family: 'Prequel', sans-serif;
+  }
 }
 
 .scroller {

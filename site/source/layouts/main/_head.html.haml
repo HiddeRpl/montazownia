@@ -10,7 +10,7 @@
 %meta{'name' => 'generator', 'content' => 'middleman'}
 
 -get_fonts.each do |font|
-  %link{:rel=>:stylesheet, :type => :"text/css", :href => "#{font}"}
+  %link{:rel=>:stylesheet, :type => :"text/plain", :href => "#{font}"}
 
 -['16x16', '32x32', '96x96'].each do |icon_size|
   %link{:rel => 'icon', :type => 'image/png', :sizes => '16x16', :href => "/assets/images/favicons/favicon-#{icon_size}.png"}
