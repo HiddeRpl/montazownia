@@ -34,15 +34,15 @@ $(document).ready(function () {
                 $('.fc-event-container').each(function () {
                     var index = $(this).index();
                     $(this).closest('.fc-row').find('.fc-bg td').eq(index).addClass('day--free');
-                    $(this).css('visibility','hidden');
+                    $(this).css('visibility', 'hidden');
                 });
             }
 
-            if($('.fc-time')) {
+            if ($('.fc-time')) {
                 $('.fc-time').each(function () {
                     var index = $(this).closest('.fc-event-container').index();
                     $(this).closest('.fc-row').find('.fc-bg td').eq(index).addClass('day--partially');
-                })
+                });
             };
         }
         // dayClick: function dayClick(date) {

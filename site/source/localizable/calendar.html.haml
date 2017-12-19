@@ -5,15 +5,17 @@ header: "sites.calendar.title"
 additional_stylesheets:
   - "lib/fullcalendar/fullcalendar.min"
 additional_javascripts:
-  - "lib/Moment/moment.min"
-  - "lib/FullCalendar/fullcalendar.min"
-  - "lib/FullCalendar/en-gb"
-  - "lib/FullCalendar/pl"
-  - "lib/FullCalendar/es"
-  - "lib/gCal/gcal.min"
-  - "calendar.js"
-  - "map.js"
-  - "https://maps.googleapis.com/maps/api/js?key=AIzaSyCc008w_NpJfOS9d5TTy9J8-4ER_FrlIKk&callback=initMap"
+  - src: "lib/Moment/moment.min"
+  - src: "lib/FullCalendar/fullcalendar.min"
+  - src: "lib/FullCalendar/en-gb"
+  - src: "lib/FullCalendar/pl"
+  - src: "lib/FullCalendar/es"
+  - src: "lib/gCal/gcal.min"
+  - src: "calendar.js"
+  - src: "map.js"
+  - src: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCc008w_NpJfOS9d5TTy9J8-4ER_FrlIKk&callback=initMap"
+    async: "true"
+    defer: "true"
 ---
 %section
   %header

@@ -2,6 +2,6 @@
 = javascript_include_tag "lib/jQuery/jquery.min"
 -if current_page.data.additional_javascripts?
   -current_page.data.additional_javascripts.each do |javascript|
-    = javascript_include_tag javascript
+    = javascript_include_tag javascript.src, :async => javascript.async?, :defer => javascript.defer?
 = javascript_include_tag "lib/MaterialDesignLite/material.min"
 = javascript_include_tag "site"
