@@ -49,7 +49,7 @@
 }
 
 .dialog-content {
-  width: 800px;
+  width: fit-content;
   position: fixed;
   top: 50%;
   transform: translate(0, -50%);
@@ -62,8 +62,37 @@
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.dialog-image-container {
+  position: relative;
+}
+
+.dialog-image-slider {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  height: 100%;
+  width: 20%;
+
+  &:first-of-type {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), transparent);
+  }
+
+  &:last-of-type {
+    right: 0;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.7), transparent);
+    justify-content: flex-end;
+  }
+
+  &__icon {
+    color: $page-secondary;
+    font-size: 3.5em;
+    cursor: pointer;
+  }
+}
+
 .dialog-image {
   max-width: 900px;
   max-height: 500px;
-  box-shadow: 0 9px 46px 8px rgba(0,0,0,.14), 0 11px 15px -7px rgba(0,0,0,.12), 0 24px 38px 3px rgba(0,0,0,.2)
 }

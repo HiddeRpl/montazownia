@@ -20,6 +20,11 @@ additional_javascripts:
 
 %dialog.mdl-dialog.dialog-content
   .mdl-dialog__content.halign-wrapper.valign-wrapper
-    %img.dialog-image.dialogImg
+    .dialog-image-container
+      %img.dialog-image.dialogImg
+      %span.dialog-image-slider.valign-wrapper
+        %i.material-icons.dialog-image-slider__icon.prevImage keyboard_arrow_left
+      %span.dialog-image-slider.valign-wrapper
+        %i.material-icons.dialog-image-slider__icon.nextImage keyboard_arrow_right
   .mdl-dialog__actions.halign-wrapper.valign-wrapper
     %button.mdl-button.closeDialog{:type => "button"}=t("dialogs.close")

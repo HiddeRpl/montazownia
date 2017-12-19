@@ -10,6 +10,7 @@ $(document).ready(function () {
 
     function resetImage() {
         document.querySelector('.dialogImg').setAttribute('src', '');
+        document.querySelector('.dialogImg').setAttribute('data-index', '');
     }
 
     if (!dialog.showModal) {
@@ -19,8 +20,10 @@ $(document).ready(function () {
     showDialogButton.forEach(function (image) {
         return image.addEventListener('click', function () {
             var imageSrc = image.childNodes[1].getAttribute('src');
+            var imageIndex = image.childNodes[1].getAttribute('data_index');
             dialog.showModal();
             document.querySelector('.dialogImg').setAttribute('src', imageSrc);
+            document.querySelector('.dialogImg').setAttribute('data_index', imageIndex);
         });
     });
 
@@ -39,6 +42,44 @@ $(document).ready(function () {
             dialog.close();
             resetImage();
         }
+    });
+    /*
+        ### END ###
+    */
+
+    /*
+        ### IMAGE SLIDER ###
+    */
+
+    var prevButton = document.querySelector('.prevImage');
+    var nextButton = document.querySelector('.nextImage');
+
+    prevButton.addEventListener('click', function () {
+        var dialogImg = document.querySelector('.dialogImg');
+        var imgIndex = parseInt(dialogImg.getAttribute('data_index'));
+        if (imgIndex === 0) return;
+        var img = document.querySelector('.thumbnail[data_index="' + (imgIndex - 1) + '"]');
+        var imgSrc = img.getAttribute('src');
+        var imgIndex = img.getAttribute('data_index');
+        $('.dialogImg').fadeOut('fast', function () {
+            dialogImg.setAttribute('src', imgSrc);
+            dialogImg.setAttribute('data_index', imgIndex);
+            $('.dialogImg').fadeIn('slow');
+        });
+    });
+
+    nextButton.addEventListener('click', function () {
+        var dialogImg = document.querySelector('.dialogImg');
+        var imgIndex = parseInt(dialogImg.getAttribute('data_index'));
+        if (imgIndex === showDialogButton.length - 1) return;
+        var img = document.querySelector('.thumbnail[data_index="' + (imgIndex + 1) + '"]');
+        var imgSrc = img.getAttribute('src');
+        var imgIndex = img.getAttribute('data_index');
+        $('.dialogImg').fadeOut('fast', function () {
+            dialogImg.setAttribute('src', imgSrc);
+            dialogImg.setAttribute('data_index', imgIndex);
+            $('.dialogImg').fadeIn('fast');
+        });
     });
     /*
         ### END ###
