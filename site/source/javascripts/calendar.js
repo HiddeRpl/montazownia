@@ -31,15 +31,15 @@ $(document).ready(function () {
             $('.fc-clear').remove();
 
             if ($('.fc-event-container')) {
-                $('.fc-event-container').each(function () {
+                $('.fc-content-skeleton tr:first-of-type .fc-event-container').each(function () {
                     var index = $(this).index();
                     $(this).closest('.fc-row').find('.fc-bg td').eq(index).addClass('day--free');
-                    $(this).css('visibility', 'hidden');
+                    $('.fc-event-container').css('visibility', 'hidden');
                 });
             }
 
             if ($('.fc-time')) {
-                $('.fc-time').each(function () {
+                $('.fc-content-skeleton tr:first-of-type .fc-time').each(function () {
                     var index = $(this).closest('.fc-event-container').index();
                     $(this).closest('.fc-row').find('.fc-bg td').eq(index).addClass('day--partially');
                 });
