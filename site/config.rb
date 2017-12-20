@@ -101,7 +101,6 @@ end
 
 configure :build do
   activate :minify_css
-
   Dir.foreach("source/javascripts/") do |jsfile|
     if File.extname(jsfile).eql?(".js")
       puts "Compilation: #{jsfile}".blue
@@ -112,7 +111,7 @@ configure :build do
       puts "Compilation success".green
     end
   end
-  activate :minify_javascript
+  # activate :minify_javascript
   # activate :asset_hash
   # currently disable caching 
 end
