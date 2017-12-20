@@ -27,9 +27,9 @@ $(document).ready(function () {
         $('.navbarTrans').show();
     }
 
-    $(window).scroll(function () {
-        navbarScroll();
-    });
+    // $(window).scroll(function () {
+    //     navbarScroll();
+    // });
     /*
         ### END ###
     */
