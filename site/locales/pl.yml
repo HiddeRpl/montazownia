@@ -21,3 +21,14 @@ pl:
   sites:
     calendar:
       title: "Kalendarz"
+  calendar:
+    header: Zapisz się!
+    legend:
+      free: Wolne dni
+      part: Dni wolne w podanych godzinach
+      busy: Te dni już nie są wolne
+    contact_with_us: Wybierz jakąś formę kontaktu i daj znać, że chcesz dziarę.
+  faq:
+    header: Pytania i odpowiedzi - rozwiewamy wątpliwości
+  portfolio:
+    header: Nasze tatuaże

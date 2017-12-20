@@ -19,14 +19,14 @@ additional_javascripts:
 ---
 %section
   %header
-    %h3.section__header WOLNE TERMINY
+    %h3.section__header t("calendar.header")
   .section__header-separotor
   .mdl-grid.contact-wrapper
     %article.mdl-cell--6-col.contact__info
-      %p Skontaktuj się z nami w celu umówienia sesji lub wybierz datę
+      %p =t("calendar.contact_with_us")
       .contact__info__element
         %i.material-icons.contact__info__social-icons smartphone
-        %span 666-666-666
+        %span +48 696-568-190 - Mikołaj
       .contact__info__element
         %i.material-icons.contact__info__social-icons store
         %span ul. Różana 6, Poznań 61-577
@@ -42,10 +42,10 @@ additional_javascripts:
     %h6 Legenda
     .legend__color
       .legend__color__el.legend__color__el--free
-      %span.legend__text__el Wolny termin
+      %span.legend__text__el =t("calendar.legend.fullday")
       .legend__color__el.legend__color__el--partially
-      %span.legend__text__el Zajęty częściowo termin
+      %span.legend__text__el =t("calendar.legend.part")
       .legend__color__el.legend__color__el--busy
-      %span.legend__text__el Zajęty termin
+      %span.legend__text__el =t("calendar.legend.not")
   %figure
     #calendar

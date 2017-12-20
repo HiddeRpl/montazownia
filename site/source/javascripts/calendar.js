@@ -43,7 +43,7 @@ $(document).ready(function () {
                     var index = $(this).closest('.fc-event-container').index();
                     $(this).closest('.fc-row').find('.fc-bg td').eq(index).addClass('day--partially');
                 });
-            };
+            }
         }
         // dayClick: function dayClick(date) {
         //     alert('Date: ' + date.format());

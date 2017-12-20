@@ -9,15 +9,16 @@
 %meta{'name' => 'ICBM', 'content' => '52.39792742; 16.92453504'}
 %meta{'name' => 'generator', 'content' => 'middleman'}
 
--get_fonts.each do |font|
-  %link{:rel=>:stylesheet, :type => :"text/plain", :href => "#{font}"}
-
 %link{:rel=>:stylesheet, :type => :"text/css", :href => "https://fonts.googleapis.com/icon?family=Material+Icons"}
+%link{:rel=>:stylesheet, :type => :"text/css", :href => "http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700"}
 
 -['16x16', '32x32', '96x96'].each do |icon_size|
   %link{:rel => 'icon', :type => 'image/png', :sizes => '16x16', :href => "/assets/images/favicons/favicon-#{icon_size}.png"}
 
--["lib/DialogPolyfill/dialog-polyfill.min", "lib/normalize/normalize.min", "lib/MaterialDesignLite/material.min", "site"].each do |stylesheet|
+-["lib/DialogPolyfill/dialog-polyfill.min", 
+-  "lib/normalize/normalize.min", 
+-  "lib/MaterialDesignLite/material.min", 
+-  "site"].each do |stylesheet|
   =stylesheet_link_tag stylesheet
 
 -if current_page.data.additional_stylesheets?
