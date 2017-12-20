@@ -25,14 +25,14 @@ additional_javascripts:
     %article.mdl-cell--6-col.contact__info
       %p=t("calendar.contact_with_us")
       .contact__info__element
-        %i.material-icons.contact__info__social-icons smartphone
-        %span=link_to'+48 696-568-190', 'tel:0048696568190'
-      .contact__info__element
         %i.material-icons.contact__info__social-icons store
         %span ul. Różana 6, Poznań 61-577
       .contact__info__element
+        %i.material-icons.contact__info__social-icons smartphone
+        =link_to '+48 696-568-190', 'tel:0048696568190', class: "anchor"
+      .contact__info__element
         %i.material-icons.contact__info__social-icons email
-        %span=mail_to "montazownia.tattoo@gmail.com"
+        =mail_to "montazownia.tattoo@gmail.com", "montazownia.tattoo@gmail.com", class: "anchor"
       .contact__info__element
         =image_tag("site/facebook-messenger.png", class: "contact__info__social-icons")
         =link_to("Montażownia", "https://m.me/Montazownia/", class: "anchor", target: "_blank")

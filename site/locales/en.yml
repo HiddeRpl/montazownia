@@ -23,9 +23,9 @@ en:
   calendar:
     header: Make a booking!
     legend:
-      free: Free days
+      fullday: Free days
       part: Days free in shown hours
-      busy: These days are not free anymore
+      not: These days are not free anymore
     contact_with_us: Pick something and let us know that you want a tattoo ;)
   faq:
     header: F.A.Q. - everything you need to know
