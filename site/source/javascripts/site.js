@@ -19,7 +19,7 @@ $(document).ready(function () {
     // }
     var urlArray = location.pathname.split('/');
 
-    if (urlArray[2] === undefined) {
+    if (!urlArray[2]) {
         setTimeout(function () {
             $('.navbarTrans').fadeIn();
         }, 1200);
