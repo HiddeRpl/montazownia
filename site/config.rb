@@ -2,6 +2,7 @@
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
 require 'babel/transpiler'
+require 'uglifier'
 require 'colorize'
 
 load "lib/language_helpers.rb"
@@ -111,7 +112,8 @@ configure :build do
       puts "Compilation success".green
     end
   end
-  activate :minify_javascript
+  # obj = Uglifier.compile(File.read("site.js"), :output => { :quote_style => :single })
+  # activate :minify_javascript
   # activate :asset_hash
   # currently disable caching 
 end

@@ -15,8 +15,10 @@ gem 'redcarpet', '~> 3.3', '>= 3.3.3'
 # Summaries for the post
 gem 'nokogiri'
 
-#For minify
+#For js
 gem 'babel-transpiler'
+gem 'uglifier'
+
 
 #For nice output
 gem 'colorize'
