@@ -113,5 +113,6 @@ configure :build do
     end
   end
   activate :minify_javascript
-  activate :asset_hash
+  # activate :asset_hash
+  # currently disable caching 
 end
