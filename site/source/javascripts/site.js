@@ -22,7 +22,7 @@ $(document).ready(function () {
     if (urlArray[2] === undefined) {
         setTimeout(function () {
             $('.navbarTrans').fadeIn();
-        }, 1200)
+        }, 1200);
     } else {
         $('.navbarTrans').show();
     }
