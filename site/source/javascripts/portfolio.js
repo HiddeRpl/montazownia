@@ -54,25 +54,12 @@ $(document).ready(function () {
     var prevButton = document.querySelector('.prevImage');
     var nextButton = document.querySelector('.nextImage');
 
-    prevButton.addEventListener('click', function () {
+    function slider(direction) {
         var dialogImg = document.querySelector('.dialogImg');
         var imgIndex = parseInt(dialogImg.getAttribute('data_index'));
-        if (imgIndex === 0) return;
-        var img = document.querySelector('.thumbnail[data_index="' + (imgIndex - 1) + '"]');
-        var imgSrc = img.getAttribute('src');
-        var imgIndex = img.getAttribute('data_index');
-        $('.dialogImg').fadeOut('fast', function () {
-            dialogImg.setAttribute('src', imgSrc);
-            dialogImg.setAttribute('data_index', imgIndex);
-            $('.dialogImg').fadeIn('slow');
-        });
-    });
-
-    nextButton.addEventListener('click', function () {
-        var dialogImg = document.querySelector('.dialogImg');
-        var imgIndex = parseInt(dialogImg.getAttribute('data_index'));
-        if (imgIndex === showDialogButton.length - 1) return;
-        var img = document.querySelector('.thumbnail[data_index="' + (imgIndex + 1) + '"]');
+        var isReachRange = imgIndex + direction > showDialogButton.length - 1 || imgIndex + direction < 0;
+        if (isReachRange) return;
+        var img = document.querySelector('.thumbnail[data_index="' + (imgIndex + direction) + '"]');
         var imgSrc = img.getAttribute('src');
         var imgIndex = img.getAttribute('data_index');
         $('.dialogImg').fadeOut('fast', function () {
@@ -80,6 +67,23 @@ $(document).ready(function () {
             dialogImg.setAttribute('data_index', imgIndex);
             $('.dialogImg').fadeIn('fast');
         });
+    }
+
+    nextButton.addEventListener('click', function () {
+        slider(1);
+    });
+    prevButton.addEventListener('click', function () {
+        slider(-1);
+    });
+    document.addEventListener('keydown', function (e) {
+        var isDialogOpen = document.querySelector('.dialog-content').hasAttribute('open');
+        if (isDialogOpen) {
+            if (e.keyCode === 37) {
+                slider(-1);
+            } else if (e.keyCode === 39) {
+                slider(1);
+            }
+        }
     });
     /*
         ### END ###
