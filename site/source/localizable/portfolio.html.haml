@@ -8,7 +8,7 @@ additional_javascripts:
 ---
 %section.portfolio
   %header
-    %h3.section__header =t("portfolio.header")
+    %h3.section__header=t("portfolio.header")
   .section__header-separotor
   .portfolio-wrapper
     -sitemap.resources.select{ |r| r.path.start_with?("assets/images/portfolio") }.each_with_index do |image, index|

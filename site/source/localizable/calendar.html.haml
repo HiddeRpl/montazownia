@@ -19,20 +19,20 @@ additional_javascripts:
 ---
 %section
   %header
-    %h3.section__header t("calendar.header")
+    %h3.section__header=t("calendar.header")
   .section__header-separotor
   .mdl-grid.contact-wrapper
     %article.mdl-cell--6-col.contact__info
-      %p =t("calendar.contact_with_us")
+      %p=t("calendar.contact_with_us")
       .contact__info__element
         %i.material-icons.contact__info__social-icons smartphone
-        %span +48 696-568-190 - Mikołaj
+        %span=link_to'+48 696-568-190', 'tel:0048696568190'
       .contact__info__element
         %i.material-icons.contact__info__social-icons store
         %span ul. Różana 6, Poznań 61-577
       .contact__info__element
         %i.material-icons.contact__info__social-icons email
-        %span montazownia.tattoo@gmail.com
+        %span=mail_to "montazownia.tattoo@gmail.com"
       .contact__info__element
         =image_tag("site/facebook-messenger.png", class: "contact__info__social-icons")
         =link_to("Montażownia", "https://m.me/Montazownia/", class: "anchor", target: "_blank")
@@ -42,10 +42,10 @@ additional_javascripts:
     %h6 Legenda
     .legend__color
       .legend__color__el.legend__color__el--free
-      %span.legend__text__el =t("calendar.legend.fullday")
+      %span.legend__text__el=t("calendar.legend.fullday")
       .legend__color__el.legend__color__el--partially
-      %span.legend__text__el =t("calendar.legend.part")
+      %span.legend__text__el=t("calendar.legend.part")
       .legend__color__el.legend__color__el--busy
-      %span.legend__text__el =t("calendar.legend.not")
+      %span.legend__text__el=t("calendar.legend.not")
   %figure
     #calendar
