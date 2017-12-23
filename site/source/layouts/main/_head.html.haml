@@ -1,16 +1,18 @@
 %meta{'charset' => 'utf-8'}
 %meta{'http-equiv' => 'x-ua-compatible', 'content' => 'ie=edge,chrome=1'}
-%meta{'name' => 'viewport', 'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no' }
 %meta{'http-equiv' => 'Last-Modified', 'content' => get_current_time}
 
-%meta{'name' => 'geo.position', 'content' => '52.39792742; 16.92453504'}
-%meta{'name' => 'geo.placename', 'content' => 'ul. Różana 6, Poznań 61-577, PL'}
-%meta{'name' => 'geo.region', 'content' => 'POL-Poland'}
-%meta{'name' => 'ICBM', 'content' => '52.39792742; 16.92453504'}
-%meta{'name' => 'generator', 'content' => 'middleman'}
+-{"viewport" => "width=device-width, initial-scale=1, shrink-to-fit=no",
+- "geo.position" => "52.39792742; 16.92453504",
+- "geo.placename" => "ul. Różana 6, Poznań 61-577, PL",
+- "geo.region" => "POL-Poland",
+- "ICBM" => "52.39792742; 16.92453504",
+- "generator" => "middleman"}.each do |name, content|
+  %meta{'name' => "#{name}", 'content' => "#{content}"}
 
-%link{:rel=>:stylesheet, :type => :"text/css", :href => "https://fonts.googleapis.com/icon?family=Material+Icons"}
-%link{:rel=>:stylesheet, :type => :"text/css", :href => "http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700"}
+-["https://fonts.googleapis.com/icon?family=Material+Icons",
+- "http://fonts.googleapis.com/css?family=Open+Sans:300,400,500,700"].each do | font |
+  %link{:rel=>:stylesheet, :type => :"text/css", :href => "#{font}"}
 
 -['16x16', '32x32', '96x96'].each do |icon_size|
   %link{:rel => 'icon', :type => 'image/png', :sizes => '16x16', :href => "/assets/images/favicons/favicon-#{icon_size}.png"}

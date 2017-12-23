@@ -101,17 +101,17 @@ end
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
 configure :build do
-  activate :minify_css
-  Dir.foreach("source/javascripts/") do |jsfile|
-    if File.extname(jsfile).eql?(".js")
-      puts "Compilation: #{jsfile}".blue
-      read_source = File.read("source/javascripts/#{jsfile}")
-      code_compiled = Babel::Transpiler.transform read_source
-      write_source = File.open("source/javascripts/#{jsfile}", "w")
-      write_source.write(code_compiled['code'])
-      puts "Compilation success".green
-    end
-  end
+  # activate :minify_css
+  # Dir.foreach("source/javascripts/") do |jsfile|
+  #   if File.extname(jsfile).eql?(".js")
+  #     puts "Compilation: #{jsfile}".blue
+  #     read_source = File.read("source/javascripts/#{jsfile}")
+  #     code_compiled = Babel::Transpiler.transform read_source
+  #     write_source = File.open("source/javascripts/#{jsfile}", "w")
+  #     write_source.write(code_compiled['code'])
+  #     puts "Compilation success".green
+  #   end
+  # end
   # obj = Uglifier.compile(File.read("site.js"), :output => { :quote_style => :single })
   # activate :minify_javascript
   # activate :asset_hash
