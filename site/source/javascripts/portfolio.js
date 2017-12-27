@@ -11,6 +11,7 @@ $(document).ready(function () {
     function resetImage() {
         document.querySelector('.dialogImg').setAttribute('src', '');
         document.querySelector('.dialogImg').setAttribute('data-index', '');
+        document.querySelector('.dialogAnimate').removeAttribute('style');
     }
 
     if (!dialog.showModal) {
@@ -22,6 +23,7 @@ $(document).ready(function () {
             var imageSrc = image.childNodes[1].getAttribute('src');
             var imageIndex = image.childNodes[1].getAttribute('data_index');
             dialog.showModal();
+            $('.dialogAnimate').css('transform', 'translate(0, -50%) scale(1,1)');
             document.querySelector('.dialogImg').setAttribute('src', imageSrc);
             document.querySelector('.dialogImg').setAttribute('data_index', imageIndex);
         });
@@ -76,12 +78,15 @@ $(document).ready(function () {
         slider(-1);
     });
     document.addEventListener('keydown', function (e) {
-        var isDialogOpen = document.querySelector('.dialog-content').hasAttribute('open');
+        var isDialogOpen = document.querySelector('.dialogKeys').hasAttribute('open');
         if (isDialogOpen) {
             if (e.keyCode === 37) {
                 slider(-1);
             } else if (e.keyCode === 39) {
                 slider(1);
+            }
+            if (e.keyCode === 27) {
+                resetImage();
             }
         }
     });

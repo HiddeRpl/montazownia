@@ -18,7 +18,7 @@ additional_javascripts:
           :alt => get_alt(image),
           :data_index => index)
 
-%dialog.mdl-dialog.dialog-content
+%dialog.mdl-dialog.dialog-content.dialogKeys.dialogAnimate
   .mdl-dialog__content.halign-wrapper.valign-wrapper
     .dialog-image-container
       %img.dialog-image.dialogImg
@@ -27,4 +27,4 @@ additional_javascripts:
       %span.dialog-image-slider.valign-wrapper
         %i.material-icons.dialog-image-slider__icon.nextImage keyboard_arrow_right
   .mdl-dialog__actions.halign-wrapper.valign-wrapper
-    %button.mdl-button.closeDialog{:type => "button"}=t("dialogs.close")
+    %button.mdl-button.dialog-button.closeDialog{:type => "button"}=t("dialogs.close")
