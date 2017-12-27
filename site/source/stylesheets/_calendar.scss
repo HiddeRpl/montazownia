@@ -16,11 +16,20 @@
 
     &__social-icons {
       padding: 5px 10px;
+      @media only screen and (max-width: $tablet) {
+      padding-left: 0;
+    }
     }
   }
 
   &__map {
-    flex-basis: 50%;
+    border: 4px solid $page-secondary;
+    flex-basis: calc(50% - 8px);
+    height: 300px;
+    @media only screen and (max-width: $tablet) {
+      flex-basis: 100%;
+      margin-top: 2em;
+    }
   }
 }
 
@@ -65,7 +74,6 @@ img.contact__info__social-icons {
 #map {
   width: 100%;
   height: 100%;
-  border: 4px solid $page-secondary;
 }
 
 

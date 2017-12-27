@@ -1,11 +1,4 @@
-%span.active-lang
-  =image_tag("flags/#{current_lang}.png")
-
-%button#menu-lower-right.mdl-button.mdl-js-button.mdl-button--icon
-  %i.material-icons more_vert
-%ul.mdl-menu.mdl-menu--bottom-right.mdl-js-menu.mdl-js-ripple-effect{:for => "menu-lower-right"}
-  - other_langs.each do |lang|
-    %li.mdl-menu__item.active-lang
-      =link_to(translated_url(lang, current_page.data.id), :lang => lang, :class => "other-lang") do
-        =image_tag("flags/#{lang}.png")
-        %span=full_lang_name(lang)
+- other_langs.each do |lang|
+  %span.other-lang--mobile
+    =link_to(translated_url(lang, current_page.data.id), :lang => lang, :class => "other-lang") do
+      =image_tag("flags/#{lang}.png")

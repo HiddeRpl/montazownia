@@ -1,10 +1,7 @@
 .footer-separtor
 %footer
-  %section.content__container.footer__container
-    .footer__element.title
-      &copy; Montażownia
-    .footer__element
-      = link_to 'http://facebook.com/montazownia' do
-        = image_tag 'site/facebook-icon.png', class: 'footer__social-icons'
-      = link_to 'http://instagram.com/montazownia' do
-        = image_tag 'site/insta-icon.png', class: 'footer__social-icons'
+  %section.content__container.footer__container.halign-wrapper.valign-wrapper
+    = link_to 'http://facebook.com/montazownia' do
+      = image_tag 'site/facebook-icon.png', class: 'footer__social-icons no-user-select'
+    = link_to 'http://instagram.com/montazownia' do
+      = image_tag 'site/insta-icon.png', class: 'footer__social-icons no-user-select'
