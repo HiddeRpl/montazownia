@@ -147,5 +147,14 @@ img.contact__info__social-icons {
 }
 
 .fc-bg td.day--partially {
-  background-color: $partially-term;
+  position: relative;
+  overflow: hidden;
+  .day--partially--bookmarkAM {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    transform-origin: bottom left;
+    bottom: 0;
+    background-color: $partially-term;
+  }
 }

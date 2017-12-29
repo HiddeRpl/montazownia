@@ -30,6 +30,7 @@ $(document).ready(function () {
             $('.fc-title').text(dictionary[lang]['freeTerm']);
             $('.fc-clear').remove();
 
+            /*Adding class to all day event*/
             if ($('.fc-event-container')) {
                 $('.fc-content-skeleton tr:first-of-type .fc-event-container').each(function () {
                     var index = $(this).index();
@@ -38,12 +39,33 @@ $(document).ready(function () {
                 });
             }
 
+            /*Adding class to timed event*/
             if ($('.fc-time')) {
                 $('.fc-content-skeleton tr:first-of-type .fc-time').each(function () {
                     var index = $(this).closest('.fc-event-container').index();
                     $(this).closest('.fc-row').find('.fc-bg td').eq(index).addClass('day--partially');
                 });
             }
+
+            /*Adding bookmark to timed event*/
+            function bookmarkAM() {
+                const opposite = document.querySelector('.day--partially').offsetHeight;
+                const nextTo = document.querySelector('.day--partially').offsetWidth;
+                const hypotenuse = function(sideA, sideB){
+                    return Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
+                };
+                const sinOfAngleX = opposite / hypotenuse(nextTo, opposite);
+                const degree = Math.asin(sinOfAngleX) * 180/Math.PI;
+                $('.day--partially').append('<div class="day--partially--bookmarkAM"></div>');
+                $('.day--partially--bookmarkAM').css('transform', 'rotate(-' + degree + 'deg)');
+            }
+
+            bookmarkAM();
+
+            $(window).on('resize', function () {
+                bookmarkAM();
+            })
+
         }
         // dayClick: function dayClick(date) {
         //     alert('Date: ' + date.format());
