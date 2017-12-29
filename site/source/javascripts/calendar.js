@@ -48,7 +48,14 @@ $(document).ready(function () {
             }
 
             /*Adding bookmark to timed event*/
-            function bookmarkAM() {
+            $('.day--partially').append('<div class="day--partially--bookmark day--partially--bookmark-am"></div>');
+            $('.day--partially--bookmark').css('transform', 'rotate(-' + getDegree() + 'deg)');
+
+            $(window).on('resize', function () {
+                $('.day--partially--bookmark').css('transform', 'rotate(-' + getDegree() + 'deg)');
+            });
+
+            function getDegree() {
                 const opposite = document.querySelector('.day--partially').offsetHeight;
                 const nextTo = document.querySelector('.day--partially').offsetWidth;
                 const hypotenuse = function(sideA, sideB){
@@ -56,16 +63,8 @@ $(document).ready(function () {
                 };
                 const sinOfAngleX = opposite / hypotenuse(nextTo, opposite);
                 const degree = Math.asin(sinOfAngleX) * 180/Math.PI;
-                $('.day--partially').append('<div class="day--partially--bookmarkAM"></div>');
-                $('.day--partially--bookmarkAM').css('transform', 'rotate(-' + degree + 'deg)');
+                return degree;
             }
-
-            bookmarkAM();
-
-            $(window).on('resize', function () {
-                bookmarkAM();
-            })
-
         }
         // dayClick: function dayClick(date) {
         //     alert('Date: ' + date.format());

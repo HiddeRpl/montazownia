@@ -149,12 +149,22 @@ img.contact__info__social-icons {
 .fc-bg td.day--partially {
   position: relative;
   overflow: hidden;
-  .day--partially--bookmarkAM {
+  .day--partially--bookmark {
     position: absolute;
     width: 200px;
     height: 200px;
     transform-origin: bottom left;
     bottom: 0;
     background-color: $partially-term;
+
+    &-am {
+      transform-origin: bottom left;
+      bottom: 0;
+    }
+    &-pm {
+      transform-origin: top right;
+      top: 0;
+      right: 0;
+    }
   }
 }
