@@ -43,12 +43,32 @@ $(document).ready(function () {
             if ($('.fc-time')) {
                 $('.fc-content-skeleton tr:first-of-type .fc-time').each(function () {
                     var index = $(this).closest('.fc-event-container').index();
-                    $(this).closest('.fc-row').find('.fc-bg td').eq(index).addClass('day--partially');
+                    const eventStart = $(this).html();
+                    const eventCell = $(this).closest('.fc-row').find('.fc-bg td').eq(index);
+                    var eventHour;
+
+                    if(eventStart.length === 13) {
+                        eventHour = parseInt(eventStart.slice(0,2));
+                    }
+                    else {
+                        eventHour = parseInt(eventStart.slice(0,1));
+                    }
+
+                    eventCell.addClass('day--partially')
+                        .append('<div class="day--partially--bookmark"></div>');
+
+                    if (eventHour >= 15) {
+                        eventCell.find('.day--partially--bookmark')
+                            .addClass('day--partially--bookmark-am');
+                    }
+                    else {
+                        eventCell.find('.day--partially--bookmark')
+                            .addClass('day--partially--bookmark-pm');
+                    }
                 });
             }
 
-            /*Adding bookmark to timed event*/
-            $('.day--partially').append('<div class="day--partially--bookmark day--partially--bookmark-am"></div>');
+            /*Adding rotate for bookmarks*/
             $('.day--partially--bookmark').css('transform', 'rotate(-' + getDegree() + 'deg)');
 
             $(window).on('resize', function () {
@@ -56,14 +76,16 @@ $(document).ready(function () {
             });
 
             function getDegree() {
-                const opposite = document.querySelector('.day--partially').offsetHeight;
-                const nextTo = document.querySelector('.day--partially').offsetWidth;
-                const hypotenuse = function(sideA, sideB){
-                    return Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
-                };
-                const sinOfAngleX = opposite / hypotenuse(nextTo, opposite);
-                const degree = Math.asin(sinOfAngleX) * 180/Math.PI;
-                return degree;
+                if(document.querySelector('.day--partially')) {
+                    const opposite = document.querySelector('.day--partially').offsetHeight;
+                    const nextTo = document.querySelector('.day--partially').offsetWidth;
+                    const hypotenuse = function(sideA, sideB){
+                        return Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
+                    };
+                    const sinOfAngleX = opposite / hypotenuse(nextTo, opposite);
+                    const degree = Math.asin(sinOfAngleX) * 180/Math.PI;
+                    return degree;
+                }
             }
         }
         // dayClick: function dayClick(date) {

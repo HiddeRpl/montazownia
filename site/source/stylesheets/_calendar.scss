@@ -42,25 +42,39 @@ img.contact__info__social-icons {
 
   &__color {
     display:flex;
-
+    @media only screen and (max-width: $tablet) {
+      flex-wrap: wrap;
+    }
     &__el {
-      height: 20px;
-      width: 30px;
-      border: 2px solid $page-secondary;
       margin-left: 1em;
       margin-right: 1em;
-      border-radius: 5px;
-
-      &--free {
-        background-color: $free-term;
+      @media only screen and (max-width: $tablet) {
+        width: 100%;
+        margin-bottom: 0.2em;
       }
 
-      &--busy {
-        background-color: $busy-term
-      }
+      &__icon {
+        margin-right: 0.8em;
+        height: 20px;
+        width: 30px;
+        border: 2px solid $page-secondary;
+        border-radius: 5px;
 
-      &--partially {
-        background-color: $partially-term;
+        &--free {
+          background-color: $free-term;
+        }
+
+        &--busy {
+          background-color: $busy-term
+        }
+
+        &--partially-am {
+          background: linear-gradient(135deg, $free-term 50%, $partially-term 50%);
+        }
+
+        &--partially-pm {
+          background: linear-gradient(135deg, $partially-term 50%, $free-term 50%);
+        }
       }
     }
   }

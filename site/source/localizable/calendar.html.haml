@@ -41,11 +41,17 @@ additional_javascripts:
   %article.legend
     %h6 Legenda
     .legend__color
-      .legend__color__el.legend__color__el--free
-      %span.legend__text__el=t("calendar.legend.fullday")
-      .legend__color__el.legend__color__el--partially
-      %span.legend__text__el=t("calendar.legend.part")
-      .legend__color__el.legend__color__el--busy
-      %span.legend__text__el=t("calendar.legend.not")
+      .legend__color__el.valign-wrapper
+        .legend__color__el__icon.legend__color__el__icon--free
+        %span.legend__text__el=t("calendar.legend.fullday")
+      .legend__color__el.valign-wrapper
+        .legend__color__el__icon.legend__color__el__icon--partially-am
+        %span.legend__text__el=t("calendar.legend.part")
+      .legend__color__el.valign-wrapper
+        .legend__color__el__icon.legend__color__el__icon--partially-pm
+        %span.legend__text__el=t("calendar.legend.part")
+      .legend__color__el.valign-wrapper
+        .legend__color__el__icon.legend__color__el__icon--busy
+        %span.legend__text__el=t("calendar.legend.not")
   %figure
     #calendar
