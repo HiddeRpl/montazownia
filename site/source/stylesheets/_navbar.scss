@@ -10,6 +10,28 @@
 
   & &__link {
     color: $default-dark;
+    position: relative;
+
+    &__link--active:after {
+      width: 75%;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 17px;
+      margin: auto;
+      height: 1px;
+      width: 0;
+      background-color: $default-dark;
+      transition: width 0.3s ease;
+    }
+
+    &:hover:after {
+      width: 75%;
+    }
   }
 
   &__title {

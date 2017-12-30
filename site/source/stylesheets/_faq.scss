@@ -15,6 +15,10 @@
     text-align: left;
     padding-left: 1.4em;
 
+    &:hover &__icon {
+      transform: rotate(-90deg);
+    }
+
     &__icon {
       position: absolute;
       top: 0;
@@ -26,6 +30,10 @@
       transition: transform 0.3s ease-in;
       color: $page-primary--darker;
       user-select: none;
+
+      &:hover {
+        transform: rotate(-90deg);
+      }
 
       &--active {
         transform: rotate(-180deg);
