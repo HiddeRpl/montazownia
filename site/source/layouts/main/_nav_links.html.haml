@@ -1,4 +1,9 @@
 -get_navlink_sites.each do |page|
-  =link_to(get_navlink_title(page.data.id), 
-  page.url, 
-  :class=> "mdl-navigation__link nav-bar__link")
+  -if page.data.id.eql? current_page.data.id
+    =link_to(get_navlink_title(page.data.id), 
+    page.url, 
+    :class=> "mdl-navigation__link nav-bar__link nav-bar__link--active")
+  -else
+    =link_to(get_navlink_title(page.data.id), 
+    page.url, 
+    :class=> "mdl-navigation__link nav-bar__link")
