@@ -80,7 +80,7 @@ figure {
 }
 
 .section__header-separotor {
-  background: linear-gradient(45deg, $page-primary 0%, $page-primary--darker 100%);
+  background: $gradient-border;
   height: 2px;
   width: 25vw;
   margin: 0 auto 7em auto;

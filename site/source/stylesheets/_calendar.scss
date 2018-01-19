@@ -23,7 +23,8 @@
   }
 
   &__map {
-    border: 4px solid $page-secondary;
+    background: $gradient-border;
+    padding: 4px;
     flex-basis: calc(50% - 8px);
     height: 300px;
     @media only screen and (max-width: $tablet) {
@@ -80,9 +81,14 @@ img.contact__info__social-icons {
   }
 }
 
+.calendar {
+  background: $gradient-border;
+  padding: 4px;
+}
+
 #calendar {
   margin: auto;
-  border: 4px solid $page-secondary;
+  background: $default-light;
 }
 
 #map {
