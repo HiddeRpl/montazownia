@@ -7,6 +7,8 @@
       .mdl-layout-spacer
       %nav.mdl-navigation.mdl-layout--large-screen-only
         =partial("layouts/main/nav_links")
+        -#%a.mdl-navigation__link.nav-bar__link{:href => "/pl/pytania-i-odpowiedzi#care"} Pielęgnacja - jeśli jesteś na jakiejkolwiek innej stronie
+        -#%a.mdl-navigation__link.nav-bar__link{:href => "#care"} Pielęgnacja - jesli jesteś już na pytania i odpowiedzi
         =partial("layouts/main/language_choice")
   .mdl-layout__drawer.mdl-typography--text-center{:style => "position: fixed;"}
     %header
