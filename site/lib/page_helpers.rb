@@ -41,4 +41,25 @@ module PageHelpers
     return page.data.id.eql? current_page.data.id
   end
 
+  def get_nav_link_class(is_active)
+    elementClass="mdl-navigation__link nav-bar__link"    
+    if is_active
+      elementClass.concat(" nav-bar__link--active")    
+    end
+    return elementClass
+  end
+
+  def generate_nav_link(page)
+    return link_to(get_navlink_title(page.data.id), 
+      page.url, 
+      :class => get_nav_link_class(is_current_page(page)),
+      :id => "nav-"+page.data.id)
+  end
+
+  def get_anchor_nav(title, is_active)
+    return link_to(get_navlink_title(title), 
+    "#"+get_navlink_title(title), 
+    :class=> get_nav_link_class(is_active))
+  end
+
 end

@@ -1,25 +1,12 @@
 -get_navlink_sites.each do |page|
   -if page.data.id.eql? "faq"
     -if is_current_page(page)
-      =link_to(get_navlink_title(page.data.id), 
-      "#"+get_navlink_title(page.data.id), 
-      :class=> "mdl-navigation__link nav-bar__link nav-bar__link--active")      
-      =link_to(get_navlink_title("guide"),
-      "#"+get_navlink_title("guide"),
-      :class=> "mdl-navigation__link nav-bar__link")
+      =get_anchor_nav(page.data.id, true)
+      =get_anchor_nav("guide", false)
     -else
-      =link_to(get_navlink_title(page.data.id), 
-      page.url, 
-      :class=> "mdl-navigation__link nav-bar__link")
+      =generate_nav_link(page)
       =link_to(get_navlink_title("guide"),
       page.url+"#"+get_navlink_title("guide"),
       :class=> "mdl-navigation__link nav-bar__link")
   -else
-    -if is_current_page(page)
-      =link_to(get_navlink_title(page.data.id), 
-      page.url, 
-      :class=> "mdl-navigation__link nav-bar__link nav-bar__link--active")
-    -else
-      =link_to(get_navlink_title(page.data.id), 
-      page.url, 
-      :class=> "mdl-navigation__link nav-bar__link")
+    =generate_nav_link(page)
