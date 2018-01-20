@@ -59,7 +59,8 @@ module PageHelpers
   def get_anchor_nav(title, is_active)
     return link_to(get_navlink_title(title), 
     "#"+get_navlink_title(title), 
-    :class=> get_nav_link_class(is_active))
+    :class=> get_nav_link_class(is_active)
+    :id => "nav-"+title)
   end
 
 end
