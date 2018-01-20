@@ -22,10 +22,10 @@ pl:
   calendar:
     header: Zapisz się!
     legend:
-      fullday: Wolne dni
-      part: Dni wolne w podanych godzinach
+      fullday: Cały dzień wolny
+      part: Wolne pół dnia
       not: Te dni już nie są wolne
-    contact_with_us: Wybierz jakąś formę kontaktu i daj znać, że chcesz dziarę.
+    contact_with_us: "Aby umówić się na tatuaż wybierz jeden z dni, które są wolne. Aby zarezerwować dzień należy wpłacić zadatek w wysokości 100 zł. W celu ustalenia szczegółów skontaktuj się z nami: "
   faq:
     header: Pytania i odpowiedzi - rozwiewamy wątpliwości
   portfolio:

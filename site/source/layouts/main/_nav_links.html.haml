@@ -7,7 +7,7 @@
       =generate_nav_link(page)
       =link_to(get_navlink_title("guide"),
       page.url+"#"+get_navlink_title("guide"),
-      :class=> "mdl-navigation__link nav-bar__link"
+      :class=> "mdl-navigation__link nav-bar__link",
       :id => "nav-"+get_navlink_title("guide"))
   -else
     =generate_nav_link(page)
