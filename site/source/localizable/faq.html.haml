@@ -6,29 +6,11 @@ header: "F.A.Q."
 additional_javascripts:
   - src: "faq.js"
 ---
-%section{:id => get_navlink_title("faq")}
-  %header
-    %h3.section__header=t("faq.header")
-  .section__header-separotor
-  -get_faq_list.each do |item|
-    %article.question
-      %h4.question__title.showAnswer
-        %i.material-icons.question__title__icon.rotateIcon keyboard_arrow_down
-        %strong=item.question
-      %p.question__answer.answerShown
-        =item.answer
-        -if item.link
-          %span.anchor=link_to(item.link.info, item.link.address, target: "_blank")
-%section{:id => get_navlink_title("guide")}
-  %header
-    %h3.section__header Pielęgnacja
-  .section__header-separotor
-  -get_tattoo_care_list.each do |item|
-    %article.question
-      %h4.question__title.showAnswer
-        %i.material-icons.question__title__icon.rotateIcon keyboard_arrow_down
-        %strong=item.question
-      %p.question__answer.answerShown
-        =item.answer
-        -if item.link
-          %span.anchor=link_to(item.link.info, item.link.address, target: "_blank")
+=partial(:'partials/question_section', 
+  :locals => {:section_id => get_navlink_title("faq"), 
+  :section_header => t("faq.header"), 
+  :list => get_faq_list})
+=partial(:'partials/question_section', 
+  :locals => {:section_id => get_navlink_title("guide"),
+  :section_header => "Pielęgnacja",
+  :list => get_tattoo_care_list})

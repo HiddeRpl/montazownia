@@ -33,7 +33,7 @@ module PageHelpers
     if check_language "pl"
       return data.tattoo_care_pl.list
     elsif check_language "en"
-      return data.tatto_care_en.list
+      return data.tattoo_care_en.list
     end
   end
 
