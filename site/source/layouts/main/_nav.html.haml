@@ -3,17 +3,15 @@
     .mdl-layout__header-row
       %header
         %h1
-          %span.mdl-layout-title.nav-bar__title Montazownia
+          %span.mdl-layout-title.nav-bar__title Montażownia
       .mdl-layout-spacer
       %nav.mdl-navigation.mdl-layout--large-screen-only
         =partial("layouts/main/nav_links")
-        -#%a.mdl-navigation__link.nav-bar__link{:href => "/pl/pytania-i-odpowiedzi#care"} Pielęgnacja - jeśli jesteś na jakiejkolwiek innej stronie
-        -#%a.mdl-navigation__link.nav-bar__link{:href => "#care"} Pielęgnacja - jesli jesteś już na pytania i odpowiedzi
         =partial("layouts/main/language_choice")
   .mdl-layout__drawer.mdl-typography--text-center{:style => "position: fixed;"}
     %header
       %h1
-        %span.mdl-layout-title Montazownia
+        %span.mdl-layout-title Montażownia
     %nav.mdl-navigation
       =partial("layouts/main/nav_links")
       =partial("layouts/main/language_choice-mobile")

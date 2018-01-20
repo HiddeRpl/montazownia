@@ -1,9 +1,9 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
-require 'babel/transpiler'
-require 'uglifier'
-require 'colorize'
+# require 'babel/transpiler'
+# require 'uglifier'
+# require 'colorize'
 
 load "lib/language_helpers.rb"
 load "lib/translation_helpers.rb"
@@ -50,41 +50,6 @@ page 'localizable/blog/posts/*', :layout => :post
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
-
-
-activate :blog do |blog|
-  # This will add a prefix to all links, template references and source paths
-  blog.prefix = "/{locale}"
-  blog.permalink = "/blog/posts/{year}/{month}/{day}/{title}.html"
-  # Matcher for blog source files
-  blog.sources = "/blog/posts/{year}-{month}-{day}-{title}.html"
-  # blog.layout = "layout"
-
-  # 'Regex or string that delimits the article summary from the rest of the article.'
-  blog.summary_separator = /(READMORE)/
-  blog.summary_length = 160
-
-  # blog.default_extension = ".markdown.erb"
-
-  # blog.tag_template = "localizable/blog_tag.html"
-  # blog.taglink = "/{locale}/blog/posts/tag/{tag}.html"
-
-  # blog.calendar_template = "localizable/blog_calendar.html"
-  blog.generate_year_pages = false
-  # blog.year_link = "/blog/posts/{year}.html"
-
-  # blog.year_template = 'summary'
-  blog.generate_month_pages = false
-  # blog.month_link = "/{locale}/blog/posts/{year}/{month}.html"
-  # blog.month_template = 'summary'
-  blog.generate_day_pages = false
-
-  # Enable pagination
-  blog.paginate = true
-  blog.per_page = 5
-  blog.page_link = "page/{num}"
-end
-
 
 # Proxy pages
 # https://middlemanapp.com/advanced/dynamic-pages/

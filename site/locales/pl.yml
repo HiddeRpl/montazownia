@@ -5,7 +5,6 @@ pl:
   paths:
     calendar: "wolne-terminy"
     faq: "pytania-i-odpowiedzi"
-    guide: "pielegnacja-tatuazu"
   titles:
     calendar: "Wolne terminy"
     faq: "Pytania i odpowiedzi"
@@ -13,10 +12,9 @@ pl:
     main: "Strona główna"
   descriptions:
     calendar: "Kalendarz z wolnymi listą dni na które można zarezerwować sesję tatuażu lub zorganizować wyjazd."
-    faq: "Najczęstsze pytania zadawane na temat tatuaży i odpowiedzi na nie."
+    faq: "Najczęstsze pytania zadawane na temat tatuaży, procesu tatuowania oraz pielęgnacji świeżych tatuaży."
     main: "Strona główna Montażowni tatuażu w Poznaniu."
     portfolio: "Portfolio tatuaży, które do tej pory zostały wykonane w naszym studiu."
-    guide: "Krótki poradnik co robić, aby zadbać o swój świeżo zrobiony tatuaż."
     blog: "Blog o historii tatuowania, kulturze tatuaży oraz relacje z naszych podróży i guestspottów."
   sites:
     calendar:

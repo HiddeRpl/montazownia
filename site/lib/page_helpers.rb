@@ -29,4 +29,16 @@ module PageHelpers
     end
   end
 
+  def get_tattoo_care_list
+    if check_language "pl"
+      return data.tattoo_care_pl.list
+    elsif check_language "en"
+      return data.tatto_care_en.list
+    end
+  end
+
+  def is_current_page(page)
+    return page.data.id.eql? current_page.data.id
+  end
+
 end

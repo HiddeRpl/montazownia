@@ -6,7 +6,7 @@ header: "F.A.Q."
 additional_javascripts:
   - src: "faq.js"
 ---
-%section#faq
+%section{:id => get_navlink_title("faq")}
   %header
     %h3.section__header=t("faq.header")
   .section__header-separotor
@@ -19,11 +19,11 @@ additional_javascripts:
         =item.answer
         -if item.link
           %span.anchor=link_to(item.link.info, item.link.address, target: "_blank")
-%section#care
+%section{:id => get_navlink_title("guide")}
   %header
     %h3.section__header Pielęgnacja
   .section__header-separotor
-  -get_faq_list.each do |item|
+  -get_tattoo_care_list.each do |item|
     %article.question
       %h4.question__title.showAnswer
         %i.material-icons.question__title__icon.rotateIcon keyboard_arrow_down

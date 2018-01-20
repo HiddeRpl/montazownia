@@ -1,0 +1,11 @@
+list:
+  - question: "Czym powinno się smarować tatuaż?"
+    answer: "Przede wszystkim nie Niveą. Z naturalnych produktów polecam maść na bazie kokosa. Z produktów aptecznych najlepiej nada się do tego Bepanthen."
+  - question: "Jak powinno osłaniać się tatuaż?"
+    answer: "Najlepiej użyć do tego materiału, który będzie chłonny, np. podkładu pieluchowego. Folia powinna być rozwiązaniem przejściowym gdy nie mamy nic innego do użycia. Na noc, jeżeli miejsce wykonania tatuażu na to pozwala, skróra powinna być nieosłonięta, tak by mogła oddychać."
+  - question: "Czy mogę się opalać z tatuażem?"
+    answer: "Tak, oczywiście. Pamiętaj tylko o tym, że promienie UV, niszczą pigment, dlatego do opalania tatuaży, powinno stosować się krem z filtrem UV50."
+  - question: "Czy mogę iść na siłownię po tatuażu?"
+    answer: "Niestety nie. Zaleca się zaprzestanie uprawiania intensywnych sportów na przynajmniej tydzień."
+  - question: "Jak długo goi się tatuaż?"
+    answer: "Jest to kwestia indywidualna. Pierwsze kilka dni to opuchlizna i zasklapienia ran. Następnie powstają strupki, których nie wolno zdrapywać. Po ustąpieniu strupków, gojenie będzie trwać pod skórą. Łącznie cały proces zająć może koło miesiąca."

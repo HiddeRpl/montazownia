@@ -1,0 +1,13 @@
+%section{:id => section_id}
+  %header
+    %h3.section__header=section_header
+  .section__header-separotor
+  -list.each do |item|
+    %article.question
+      %h4.question__title.showAnswer
+        %i.material-icons.question__title__icon.rotateIcon keyboard_arrow_down
+        %strong=item.question
+      %p.question__answer.answerShown
+        =item.answer
+        -if item.link
+          %span.anchor=link_to(item.link.info, item.link.address, target: "_blank")
