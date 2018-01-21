@@ -8,9 +8,11 @@ additional_javascripts:
 ---
 =partial(:'partials/question_section', 
   :locals => {:section_id => get_navlink_title("faq"), 
+  :paragraph => "faq_introduction",
   :section_header => t("faq.header"), 
   :list => get_faq_list})
 =partial(:'partials/question_section', 
   :locals => {:section_id => get_navlink_title("guide"),
+  :paragraph => "care_introduction",
   :section_header => "Pielęgnacja",
   :list => get_tattoo_care_list})

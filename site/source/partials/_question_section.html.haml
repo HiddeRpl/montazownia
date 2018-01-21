@@ -2,6 +2,7 @@
   %header
     %h3.section__header=section_header
   .section__header-separotor
+  =partial(:"partials/#{paragraph}")
   -list.each do |item|
     %article.question
       %h4.question__title.showAnswer

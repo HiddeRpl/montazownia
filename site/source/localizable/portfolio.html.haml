@@ -10,13 +10,17 @@ additional_javascripts:
   %header
     %h3.section__header=t("portfolio.header")
   .section__header-separotor
+  %p=t("portfolio.introduction")
   .portfolio-wrapper
-    -sitemap.resources.select{ |r| r.path.start_with?("assets/images/portfolio") }.each_with_index do |image, index|
+    -sitemap.resources.select{ |r| 
+    -   r.path.start_with?("assets/images/portfolio") 
+    - }.sort{|a, b| 
+    -   a.path <=> b.path}.each_with_index do |image, index|
       %figure.portfolio-wrapper__element.openImage
         =image_tag(image.path.gsub('assets/images/', ''),
-         :class => "thumbnail",
+          :class => "thumbnail",
           :alt => get_alt(image),
-          :data_index => index)
+          :data_index => index+1)
 
 %dialog.mdl-dialog.dialog-content.dialogKeys.dialogAnimate
   .mdl-dialog__content.halign-wrapper.valign-wrapper

@@ -5,11 +5,13 @@ pl:
   paths:
     calendar: "wolne-terminy"
     faq: "pytania-i-odpowiedzi"
+    terms: "kwestie-prawne"
   titles:
     calendar: "Wolne terminy"
     faq: "Pytania i odpowiedzi"
     guide: "Pielęgnacja"
     main: "Strona główna"
+    terms: "Kwestie prawne"
   descriptions:
     calendar: "Kalendarz z wolnymi listą dni na które można zarezerwować sesję tatuażu lub zorganizować wyjazd."
     faq: "Najczęstsze pytania zadawane na temat tatuaży, procesu tatuowania oraz pielęgnacji świeżych tatuaży."
@@ -20,13 +22,14 @@ pl:
     calendar:
       title: "Kalendarz"
   calendar:
-    header: Zapisz się!
+    header: "Zapisz się!"
     legend:
-      fullday: Cały dzień wolny
-      part: Wolne pół dnia
-      not: Te dni już nie są wolne
+      fullday: "Cały dzień wolny"
+      part: "Wolne pół dnia"
+      not: "Te dni już nie są wolne"
     contact_with_us: "Aby umówić się na tatuaż wybierz jeden z dni, które są wolne. Aby zarezerwować dzień należy wpłacić zadatek w wysokości 100 zł. W celu ustalenia szczegółów skontaktuj się z nami: "
   faq:
-    header: Pytania i odpowiedzi - rozwiewamy wątpliwości
+    header: "Pytania i odpowiedzi - rozwiewamy wątpliwości"
   portfolio:
-    header: Nasze tatuaże
+    header: "Nasze tatuaże"
+    introduction: "Tutaj coś o dziaraniu"
